@@ -22,6 +22,8 @@
     @stack('css')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('test/owl.carousel/dist/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
 </head>
 <body>
 <div id="app">
@@ -72,8 +74,13 @@
     </footer>
 </div>
 
-<script src="./node_modules/jquery/dist/jquery.js"></script>
-<script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="{{asset('test/jquery/dist/jquery.js')}}"></script>
+<script src="{{asset('test/owl.carousel/dist/owl.carousel.min.js')}}"></script>
 
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel();
+    });
+</script>
 </body>
 </html>
