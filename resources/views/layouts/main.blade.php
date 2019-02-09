@@ -23,6 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('test/owl.carousel/dist/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('test/owl.carousel/dist/assets/owl.theme.default.min.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -78,9 +79,17 @@
 <script src="{{asset('test/owl.carousel/dist/owl.carousel.min.js')}}"></script>
 
 <script>
-    $(document).ready(function(){
-        $('.owl-carousel').owlCarousel();
-    });
+    $('.owl-carousel').owlCarousel({
+        center: true,
+        items:2,
+        loop:true,
+        margin:10,
+        responsive:{
+            600:{
+                items:4
+            }
+        }
+    })
 </script>
 </body>
 </html>
