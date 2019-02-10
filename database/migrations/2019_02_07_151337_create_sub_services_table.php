@@ -16,8 +16,8 @@ class CreateSubServicesTable extends Migration
         Schema::create('sub_services', function (Blueprint $table) {
             $table->smallIncrements('id');
             $table->unsignedInteger('service_id');
-            $table->string('name', 50);
-            $table->string('alias', 50);
+            $table->string('sub_service_name', 50);
+            $table->string('sub_service_alias', 50);
             $table->decimal('price');
             $table->smallInteger('time');
             $table->text('description');

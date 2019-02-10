@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
 
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" async></script>
     <!-- Fonts -->
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -49,7 +49,7 @@
                 <ul class="navbar-nav mx-auto text-center  justify-content-between w-100">
                     <li class="nav-item"><a href="{{'/o-nas'}}" class="nav-link {{ request()->is('o-nas') ? 'active' : '' }}">O NAS</a></li>
                     <li class="nav-item nav-link">OFERTA</li>
-                    <li class="nav-item"><a href="{{'/cennik'}}" class="nav-link {{ request()->is('cennik') ? 'active' : '' }}">CENNIK</a></li>
+                    <li class="nav-item"><a href="{{ route('cennik') }}" class="nav-link {{ request()->is('cennik') ? 'active' : '' }}">CENNIK</a></li>
                     <li class="nav-item nav-link">KONTAKT</li>
                     <li class="nav-item"><a href="{{'/posts'}}" class="nav-link {{ request()->is('posts*') ? 'active' : '' }}">AKTUALNOŚCI</a></li>
                     <li class="nav-item nav-link">GALERIA</li>
@@ -75,18 +75,20 @@
     </footer>
 </div>
 
+@stack('script')
+
 <script src="{{asset('test/jquery/dist/jquery.js')}}"></script>
 <script src="{{asset('test/owl.carousel/dist/owl.carousel.min.js')}}"></script>
 
 <script>
     $('.owl-carousel').owlCarousel({
         center: true,
-        items:2,
+        items:3,
         loop:true,
-        margin:10,
+        margin:30,
         responsive:{
             600:{
-                items:4
+                items:3
             }
         }
     })

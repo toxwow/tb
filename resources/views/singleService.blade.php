@@ -1,2 +1,3 @@
 
-{{$singleService}}
+{{--{{$singleService}}--}}
+@dd($singleService)

@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
          $this->call([
              ServicesTableSeeder::class,
-             SubServiceTableSeeder::class]);
+             SubServiceTableSeeder::class,
+             PhotoTableSeeder::class]);
     }
 }
