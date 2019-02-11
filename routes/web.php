@@ -15,7 +15,7 @@
 //    return view('welcome');
 //});
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index') ->name('home');
 
 Route::get('oferta/{id}', 'HomeController@category')->name('test');
 

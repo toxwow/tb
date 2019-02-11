@@ -32,7 +32,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-3">
-                    <a href="{{'/'}}"><img src="{{ asset('/img/logo.jpg')}}" style="width: 300px;"  alt=""></a>
+                    <a href="{{route('home')}}"><img src="{{ asset('/img/logo.jpg')}}" style="width: 300px;"  alt=""></a>
                 </div>
             </div>
         </div>
@@ -47,12 +47,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mx-auto text-center  justify-content-between w-100">
-                    <li class="nav-item"><a href="{{'/o-nas'}}" class="nav-link {{ request()->is('o-nas') ? 'active' : '' }}">O NAS</a></li>
-                    <li class="nav-item nav-link">OFERTA</li>
+                    <li class="nav-item"><a href="{{'/o-nas'}}" class="nav-link disabled {{ request()->is('o-nas') ? 'active' : '' }}">O NAS</a></li>
+                    <li class="nav-item nav-link disabled">OFERTA</li>
                     <li class="nav-item"><a href="{{ route('cennik') }}" class="nav-link {{ request()->is('cennik') ? 'active' : '' }}">CENNIK</a></li>
-                    <li class="nav-item nav-link">KONTAKT</li>
-                    <li class="nav-item"><a href="{{'/posts'}}" class="nav-link {{ request()->is('posts*') ? 'active' : '' }}">AKTUALNOŚCI</a></li>
-                    <li class="nav-item nav-link">GALERIA</li>
+                    <li class="nav-item nav-link disabled">KONTAKT</li>
+                    <li class="nav-item"><a href="{{'/posts'}}" class="nav-link disabled {{ request()->is('posts*') ? 'active' : '' }}">AKTUALNOŚCI</a></li>
+                    <li class="nav-item nav-link disabled">GALERIA</li>
                 </ul>
 
 
