@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Cennik')
+@section('title', '- Cennik')
 
 @push('css')
     <style>
@@ -12,7 +12,6 @@
             color: #878787;
         }
     </style>
-    c
 @endpush
 
 
@@ -64,6 +63,31 @@
 
         </div>
     </div>
+
+    {{--<div class="container">--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-12 d-flex justify-content-between">--}}
+
+                {{--<div class="embed-responsive" style="width: 220px; height: 400px;">--}}
+                    {{--<video controls="true" class="embed-responsive-item">--}}
+                        {{--<source src="img/video/1.mp4" type="video/mp4" />--}}
+                    {{--</video>--}}
+                {{--</div>--}}
+
+                {{--<div class="embed-responsive" style="width: 220px; height: 400px;">--}}
+                    {{--<video controls="true" class="embed-responsive-item">--}}
+                        {{--<source src="img/video/2.mp4" type="video/mp4" />--}}
+                    {{--</video>--}}
+                {{--</div>--}}
+
+                {{--<div class="embed-responsive" style="width: 220px; height: 400px;">--}}
+                    {{--<video controls="true" class="embed-responsive-item">--}}
+                        {{--<source src="img/video/3.mp4" type="video/mp4" />--}}
+                    {{--</video>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 
 
 @endsection
