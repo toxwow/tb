@@ -21,6 +21,8 @@ Route::get('oferta/{id}', 'HomeController@category')->name('test');
 
 Route::get('cennik', 'HomeController@prices') -> name ('cennik');
 
+Route::get('o-nas', 'HomeController@about') -> name ('o-nas');
+
 
 
 
