@@ -32,7 +32,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-3">
-                    <a href="{{'/'}}"><img src="{{'/img/logo.jpg'}}" style="width: 300px;"  alt=""></a>
+                    <a href="{{'/'}}"><img src="{{ asset('/img/logo.jpg')}}" style="width: 300px;"  alt=""></a>
                 </div>
             </div>
         </div>
