@@ -44,35 +44,7 @@ body{
     margin-bottom: 0;
 }
 
-.wrapper-offert-title{
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
 
-
-.wrapper-offert-title > .title-content{
-    background-color: rgba(238,237,234, 0.75);
-    text-align:center;
-    padding: 20px 0;
-    margin-left: -80px;
-    margin-bottom: -20px;
-    transition: all 0.25s ease-in-out;
-}
-
-.wrapper-offert:hover .title-content{
-    background-color: rgba(223, 242, 228, 0.95);
-}
-
-.wrapper-offert .img-offert{
-    transition: all 0.25s ease-in-out;
-}
-
-.wrapper-offert:hover .img-offert{
-    transform: scale(1.2);
-}
 
 .line-custom{
     width: 100%;
@@ -87,10 +59,11 @@ body{
 
 #map{
     width: 100%;
-    height: 300px;
+    height: 400px;
     position: relative;
     z-index: 3;
 }
+
 
 .map-bg{
     position: absolute;
@@ -114,17 +87,7 @@ a.nav-link.active{
     font-weight: 800;
 }
 
-/*Post page*/
 
-.card-post {
-    box-shadow: 0 1px 3px rgba(223,242,228,0.8), 0 1px 2px rgba(223,242,228,0.9);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    padding: 15px 20px;
-}
-
-.card-post:hover {
-    box-shadow: 0 14px 28px rgba(223,242,228,0.8), 0 10px 10px rgba(223,242,228,0.95);
-}
 
 /*About us page*/
 
@@ -145,52 +108,8 @@ a.nav-link.active{
 
 }
 
-#map {
-    height: 400px;  /* The height is 400 pixels */
-    width: 100%;  /* The width is the width of the web page */
-}
+/* END About US */
 
-div.wrapper-category-block{
-    height: 205px;
-    width: 80%;
-    overflow: hidden;
-}
-
-div.wrapper-img{
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s ease-in-out;
-}
-
-.offert-link:hover .wrapper-img {
-    transform: scale(1.1);
-}
-
-div.wrapper-category-block .wrapper-link{
-    position: absolute;
-    width: 50%;
-    height: 60px;
-    background-color: rgba(238, 237, 234, 0.85);
-    bottom: 10px;
-    text-align: center;
-    line-height: 60px;
-    font-weight: 600;
-    color: #646464;
-    right: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-.offert-link:hover .wrapper-link {
-    background-color: rgba(223, 242, 228, 0.85);
-}
-
-div.wrapper-category-block a{
-    text-decoration: none;
-    color: #646464;
-}
 
 div.single-img{
     position: relative;

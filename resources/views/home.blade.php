@@ -2,7 +2,96 @@
 @section('title', '')
 
 @push('css')
+    <style>
+        .img-wrapper-category {
+            width: 50%;
+            min-height: 200px;
+            overflow: hidden;
+        }
 
+        .img-wrapper-category > div {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            transition: all 0.5s ease-out;
+        }
+
+        .wrapper-text-category{
+            width: 50%;
+            background-color: rgba(238, 237, 234, 0.85);
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+        }
+        .wrapper-text-category:hover{
+            background-color: rgba(223, 242, 228, 0.95);
+        }
+
+        .wrapper-single-category:hover .img-wrapper-category > div {
+            transform: scale(1.1);
+
+        }
+
+        .wrapper-text-category > div.title{
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        .icon-toogle{
+            width: 15px;
+            height: 15px;
+            position: relative;
+        }
+
+        .icon-toogle:before{
+            content: '';
+            background-color: #1b1e21;
+            position: absolute;
+            transition: transform 0.25s ease-out;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            margin-left: -1px;
+        }
+
+        .icon-toogle:after{
+            content: '';
+            background-color: #1b1e21;
+            position: absolute;
+            transition: transform 0.25s ease-out;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            margin-top: -1px;
+        }
+
+        .icon-toogle.active:after{
+            transform: rotate(180deg);
+        }
+
+        .icon-toogle.active:before{
+            transform: rotate(90deg);
+        }
+
+        ul.subCategory li a{
+            text-decoration: none;
+            color: #1b1e21;
+            opacity: 0.6;
+            transition: all 1s ease-out;
+            text-decoration: underline;
+        }
+
+        ul.subCategory li a:hover{
+            opacity: 1;
+        }
+
+
+
+    </style>
 @endpush
 @section('top')
     @component('components.Top.single')
@@ -21,35 +110,31 @@
         @endslot
     @endcomponent
 
-
     <div class="container">
         <div class="row">
-            @foreach($groupeService as $key=>$service)
-                @if($key % 2)
-                    <div class="col-md-5 offset-md-2 col-12" style="position: relative; margin-bottom: 50px;">
-                        <a class='offert-link' href="/oferta/{{$service->alias}}">
-                            <div class="wrapper-category-block">
-                                <div class="wrapper-img" style="background-image: url('img/category/{{$service->image}}');"></div>
-                                <div class="wrapper-link">
-                                    {{$service->name}}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                @else
-                    <div class="col-md-5 col-12" style="position: relative; margin-bottom: 50px;">
-                        <a class='offert-link' href="/oferta/{{$service->alias}}">
-                            <div class="wrapper-category-block">
-                                <div class="wrapper-img" style="background-image: url('img/category/{{$service->image}}');"></div>
-                                <div class="wrapper-link">
-                                    {{$service->name}}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                @endif
-            @endforeach
+            @foreach($groupeServiceTest as $key=>$service)
+                <div class="col-11 mx-auto mb-1">
+                    <div class="d-flex wrapper-single-category">
+                        <div class="img-wrapper-category" style="">
+                            <div style="background-image: url('img/category/{{$service->image}}');">
 
+                            </div>
+                        </div>
+                        <div class='wrapper-text-category'>
+                            <div class="title d-flex justify-content-between">
+                                <p> {{$service->name}}</p>
+                                <div class="icon-toogle"></div>
+                            </div>
+                            <ul class="subCategory">
+                                @foreach($service->uslugi as $key =>  $test)
+                                    <li><a href="{{route('subcategory', ['id' => $service->alias ,'id2' => $service->alias_sub[$key]])}}">{{$test}}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            @endforeach
         </div>
     </div>
     @component('components.Titles.simple-title' , ['colorStatus' => 'yes']))
@@ -123,6 +208,25 @@
 @endsection
 
 @push('script')
+    <script>
+
+        $('.subCategory').hide();
+        $( ".wrapper-text-category" ).click(function() {
+            if($(this).children('.subCategory').is(':visible')){
+                $(this).children('.title').children('div').removeClass('active')
+            }
+
+
+        else{
+                $(this).children('.title').children('div').addClass('active');
+            }
+            $(this).children('.subCategory').slideToggle('fast', 'linear');
+
+        });
+
+
+
+    </script>
     <script>
         // Initialize and add the map
         function initMap() {

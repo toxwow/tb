@@ -15,7 +15,7 @@
     <!-- Fonts -->
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Styles -->
@@ -54,10 +54,8 @@
                     <li class="nav-item nav-link disabled">GALERIA</li>
                     <li class="nav-item nav-link disabled">KONTAKT</li>
                 </ul>
-
-
             </div>
-        </div>
+       </div>
     </nav>
 
     <div>
@@ -67,15 +65,13 @@
     <main class="py-4">
         @yield('content')
     </main>
-    <div class="fb-customerchat" page_id="<562981907156507>">
-    </div>
 
     <footer style="margin-top: 75px;">
         <div style="width: 100%; height: 40px; background-color: #dff2e4"></div>
     </footer>
 </div>
 
-@stack('script')
+
 
 <script src="{{asset('test/jquery/dist/jquery.js')}}"></script>
 <script src="{{asset('test/owl.carousel/dist/owl.carousel.min.js')}}"></script>
@@ -92,6 +88,8 @@
             }
         }
     })
+
 </script>
+@stack('script')
 </body>
 </html>

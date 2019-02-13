@@ -1,3 +1,14 @@
+@extends('layouts.main')
+@section('title', '')
 
-{{--{{$singleService}}--}}
-@dd($singleService)
+@push('css')
+
+@endpush
+
+
+
+@section('content')
+
+    {{$singleService}}
+
+@endsection

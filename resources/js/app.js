@@ -25,7 +25,7 @@ require('./bootstrap');
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-import 'owl.carousel';
+// import 'owl.carousel';
 
 
 /**

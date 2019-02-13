@@ -47,11 +47,11 @@
                         <tbody>
 
 
-                        @foreach($item as $dupa => $itemss)
+                        @foreach($item as $key => $single)
                             <tr>
-                                <td>{{$itemss->sub_service_name}}</td>
-                                <td>{{$itemss->time}} min</td>
-                                <td>{{ number_format($itemss->price, 0, ',' , '.')}} zł</td>
+                                <td>{{$single->sub_service_name}}</td>
+                                <td>{{$single->time}} min</td>
+                                <td>{{ number_format($single->price, 0, ',' , '.')}} zł</td>
                             </tr>
 
 
