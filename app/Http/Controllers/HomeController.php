@@ -31,19 +31,40 @@ class HomeController extends Controller
         return view('home', ['groupeService' => $allService, 'photos' => $photos, 'groupeServiceTest' => $allSericeMarge]);
     }
 
+    public function oferta()
+    {
+        $allService =  Service::all();
+        $allSericeMarge = $allService;
+        foreach ($allService as $key => $service){
+            $findSubService = SubService::where('service_id', $service->id)->get();
+            $stackName = array();
+            $stackAlias = array();
+            foreach ($findSubService as $item){
+                array_push($stackName, $item->sub_service_name);
+                array_push($stackAlias, $item->sub_service_alias);
+            }
+
+            $allSericeMarge[$key] -> {'uslugi'} = $stackName;
+            $allSericeMarge[$key] -> {'alias_sub'} = $stackAlias;
+
+        }
+        return view('offer', ['groupeService' => $allService,  'groupeServiceTest' => $allSericeMarge]);
+    }
+
     public function category($id){
+        $group = Service::where('alias', '=', $id) ->get();
         $category = DB::table('services')
             ->join('sub_services', 'services.id', '=', 'sub_services.service_id')
-            ->select('services.name', 'services.id', 'sub_services.sub_service_name')->where('services.alias', '=', $id)
+            ->select('services.name', 'services.id', 'sub_services.sub_service_name', 'sub_services.sub_service_alias')->where('services.alias', '=', $id)
             ->get();
 
 
         if ($category -> isEmpty()){
-            abort(403, 'Page not find');
+            abort(403, 'Page not found');
         }
 
         else{
-            return view('singleService' , ['singleService' => $category]);
+            return view('singleService' , ['singleService' => $category, 'category' => $group ]);
         }
     }
 

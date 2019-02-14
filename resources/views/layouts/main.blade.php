@@ -48,7 +48,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mx-auto text-center  justify-content-between w-100">
                     <li class="nav-item"><a href="{{ route('o-nas') }}" class="nav-link {{ request()->is('o-nas') ? 'active' : '' }}">O NAS</a></li>
-                    <li class="nav-item nav-link disabled">OFERTA</li>
+                    <li class="nav-item"><a href="{{route('oferta')}}" class="nav-link {{ request()->is('oferta*') ? 'active' : '' }}">OFERTA</a></li>
                     <li class="nav-item"><a href="{{ route('cennik') }}" class="nav-link {{ request()->is('cennik') ? 'active' : '' }}">CENNIK</a></li>
                     <li class="nav-item"><a href="{{'/posts'}}" class="nav-link disabled {{ request()->is('posts*') ? 'active' : '' }}">PODSŁUCHANE KONSULTACJE</a></li>
                     <li class="nav-item nav-link disabled">GALERIA</li>

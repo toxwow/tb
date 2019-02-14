@@ -18,6 +18,7 @@ class CreateServicesTable extends Migration
             $table->string('name');
             $table->string('alias');
             $table->string('image');
+            $table->text('main_description');
         });
     }
 

@@ -98,18 +98,22 @@
             <div class="col-12 col-md-6">
                 <div class="wrapper-description-person">
                     <div class="person-name">
-                        <p>Anna Brzuchacz</p>
-                        <p style="color:#5aaf9c; font-size: 0.8rem;">wizażystka, charakteryzatorka</p>
+                        <p>Magda Szajnar</p>
+                        <p style="color:#5aaf9c; font-size: 0.8rem;">lekarz stomatolog, specjalista medycyny estetycznej</p>
                     </div>
                     <div class="person-description">
-                        <p>„Z moją imienniczką współpracuję od 2016r.
-                            Każda kobieta skrywa w sobie tajemnicę. Anna ma duszę artystki, co było dla mnie niezwykle
-                            ważne przy podejmowaniu decyzji o rozpoczęciu współpracy. Jej wyobraźnia, w połączeniu z
-                            wysokiej klasy kosmetykami pozwala na nowo definiować kobiece piękno wydobywając je
-                            poprzez idealnie dobrany makijaż.
-                            Anna zna doskonale tajniki wizażu i charakteryzacji, o czym świadczą jej prace i zdjęcia. Zjednuje
-                            sobie zaufanie klientek salonu profesjonalizmem, bezpretensjonalną skromnością i ciągłym dążeniem do
-                            doskonałości w tym co kocha robić. „</p>
+                        <p>„Z Magdą współpracuję od 2012r. O naszej wieloletniej współpracy zdecydowało przeznaczanie.
+                            Magda w moim gabinecie pojawiła się z polecenia. Wiedziałam, że chcąc się rozwijać, powinnam
+                            otaczać się profesjonalistami.
+                            Magda ujęła mnie podejściem do naszych klientek. Jest bardzo konkretna i merytoryczna. Przy
+                            tym niezwykle ciepła i przepełniona empatią. W życiu prywatnym zawsze próbuje zrozumieć
+                            osoby z którymi rozmawia. Moje klientki niezwykle w niej to cenią. Magda ma niezwykłą
+                            świadomość kobiecej urody, dlatego jej celem jest przywracanie naturalnego piękna, które czas
+                            bezpowrotnie próbuje nam odebrać .
+                            Każdy zabieg medycyny estetycznej poprzedzony jest konsultacją. Podczas rozmowy, Magda
+                            odpowiada na wszystkie pytania, określa wiek skóry i wsłuchuje się w oczekiwania pacjenta. Na
+                            tej podstawie podejmuje decyzje o rodzaju zabiegu zgodnie z naszą dewizą „realizujemy
+                            marzenia, nie przekraczamy granic.”</p>
                     </div>
                 </div>
             </div>
@@ -128,22 +132,18 @@
             <div class="col-12 col-md-6">
                 <div class="wrapper-description-person">
                     <div class="person-name">
-                        <p>Magda Szajnar</p>
-                        <p style="color:#5aaf9c; font-size: 0.8rem;">lekarz stomatolog, specjalista medycyny estetycznej</p>
+                        <p>Anna Brzuchacz</p>
+                        <p style="color:#5aaf9c; font-size: 0.8rem;">wizażystka, charakteryzatorka</p>
                     </div>
                     <div class="person-description">
-                        <p>„Z Magdą współpracuję od 2012r. O naszej wieloletniej współpracy zdecydowało przeznaczanie.
-                            Magda w moim gabinecie pojawiła się z polecenia. Wiedziałam, że chcąc się rozwijać, powinnam
-                            otaczać się profesjonalistami.
-                            Magda ujęła mnie podejściem do naszych klientek. Jest bardzo konkretna i merytoryczna. Przy
-                            tym niezwykle ciepła i przepełniona empatią. W życiu prywatnym zawsze próbuje zrozumieć
-                            osoby z którymi rozmawia. Moje klientki niezwykle w niej to cenią. Magda ma niezwykłą
-                            świadomość kobiecej urody, dlatego jej celem jest przywracanie naturalnego piękna, które czas
-                            bezpowrotnie próbuje nam odebrać .
-                            Każdy zabieg medycyny estetycznej poprzedzony jest konsultacją. Podczas rozmowy, Magda
-                            odpowiada na wszystkie pytania, określa wiek skóry i wsłuchuje się w oczekiwania pacjenta. Na
-                            tej podstawie podejmuje decyzje o rodzaju zabiegu zgodnie z naszą dewizą „realizujemy
-                            marzenia, nie przekraczamy granic.”</p>
+                        <p>„Z moją imienniczką współpracuję od 2016r.
+                            Każda kobieta skrywa w sobie tajemnicę. Anna ma duszę artystki, co było dla mnie niezwykle
+                            ważne przy podejmowaniu decyzji o rozpoczęciu współpracy. Jej wyobraźnia, w połączeniu z
+                            wysokiej klasy kosmetykami pozwala na nowo definiować kobiece piękno wydobywając je
+                            poprzez idealnie dobrany makijaż.
+                            Anna zna doskonale tajniki wizażu i charakteryzacji, o czym świadczą jej prace i zdjęcia. Zjednuje
+                            sobie zaufanie klientek salonu profesjonalizmem, bezpretensjonalną skromnością i ciągłym dążeniem do
+                            doskonałości w tym co kocha robić. „</p>
                     </div>
                 </div>
             </div>

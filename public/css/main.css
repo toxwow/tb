@@ -152,3 +152,98 @@ div.single-img:hover .blur-wrapper {
 div.single-img:hover > img {
 }
 
+
+
+div.line{
+    width: 100%;
+    height: 2px;
+    background-image: -moz-linear-gradient( 0deg, rgb(195,222,202) 0%, rgb(223,242,228) 50%, rgb(188,223,214) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(195,222,202) 0%, rgb(223,242,228) 50%, rgb(188,223,214) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(195,222,202) 0%, rgb(223,242,228) 50%, rgb(188,223,214) 100%);
+}
+
+.img-wrapper-category {
+    width: 50%;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.img-wrapper-category > div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-out;
+}
+
+.wrapper-text-category{
+    width: 50%;
+    background-color: rgba(238, 237, 234, 0.85);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.wrapper-text-category:hover{
+    background-color: rgba(223, 242, 228, 0.95);
+}
+
+.wrapper-single-category:hover .img-wrapper-category > div {
+    transform: scale(1.1);
+
+}
+
+.wrapper-text-category > div.title{
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.icon-toogle{
+    width: 15px;
+    height: 15px;
+    position: relative;
+}
+
+.icon-toogle:before{
+    content: '';
+    background-color: #1b1e21;
+    position: absolute;
+    transition: transform 0.25s ease-out;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+}
+
+.icon-toogle:after{
+    content: '';
+    background-color: #1b1e21;
+    position: absolute;
+    transition: transform 0.25s ease-out;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin-top: -1px;
+}
+
+.icon-toogle.active:after{
+    transform: rotate(180deg);
+}
+
+.icon-toogle.active:before{
+    transform: rotate(90deg);
+}
+
+ul.subCategory li a{
+    text-decoration: none;
+    color: #1b1e21;
+    opacity: 0.6;
+    transition: all 1s ease-out;
+    text-decoration: underline;
+}
+
+ul.subCategory li a:hover{
+    opacity: 1;
+}

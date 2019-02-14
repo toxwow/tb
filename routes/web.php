@@ -15,15 +15,17 @@
 //    return view('welcome');
 //});
 
-Route::get('/', 'HomeController@index') ->name('home');
+Route::get('/', 'HomeController@index') -> name('home');
 
-Route::get('oferta/{id}', 'HomeController@category')->name('test');
+Route::get('oferta', 'HomeController@oferta') -> name('oferta');
 
-Route::get('oferta/{id}/{id2}', 'HomeController@subCategory')->name('subcategory');
+Route::get('oferta/{id}', 'HomeController@category') -> name('test');
 
-Route::get('cennik', 'HomeController@prices') -> name ('cennik');
+Route::get('oferta/{id}/{id2}', 'HomeController@subCategory') -> name('subcategory');
 
-Route::get('o-nas', 'HomeController@about') -> name ('o-nas');
+Route::get('cennik', 'HomeController@prices') -> name('cennik');
+
+Route::get('o-nas', 'HomeController@about') -> name('o-nas');
 
 
 
