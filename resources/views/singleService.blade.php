@@ -87,8 +87,6 @@
         }
 
         .img-fluid{
-            width: auto;
-            height: 100% !important;
         }
 
     </style>
@@ -195,6 +193,13 @@
 
 @push('script')
 
+    <script>
+
+        $('[data-toggle="lightbox"]').on('click', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
 
 
 @endpush

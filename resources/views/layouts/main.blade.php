@@ -24,8 +24,7 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('test/owl.carousel/dist/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('test/owl.carousel/dist/assets/owl.theme.default.min.css') }}" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <link href="{{ asset('test/ekko-lightbox/ekko-lightbox.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -77,16 +76,12 @@
 
 <script src="{{asset('test/jquery/dist/jquery.js')}}"></script>
 <script src="{{asset('test/owl.carousel/dist/owl.carousel.min.js')}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+<script src="{{asset('test/ekko-lightbox/ekko-lightbox.js')}}"></script>
+
 
 <script>
-    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-    });
-</script>
 
-<script>
+
     $('.owl-carousel').owlCarousel({
         center: true,
         items:3,
