@@ -26,7 +26,6 @@
 
     @endslot
     @endcomponent
-    {{--@dd($prices)--}}
 
 
     <div class="container">

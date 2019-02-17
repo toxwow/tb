@@ -13,6 +13,7 @@ class HomeController extends Controller
     public function index(){
         $allService =  Service::all();
         $allSericeMarge = $allService;
+
         foreach ($allService as $key => $service){
             $findSubService = SubService::where('service_id', $service->id)->get();
             $stackName = array();
@@ -21,13 +22,11 @@ class HomeController extends Controller
                 array_push($stackName, $item->sub_service_name);
                 array_push($stackAlias, $item->sub_service_alias);
             }
-
             $allSericeMarge[$key] -> {'uslugi'} = $stackName;
             $allSericeMarge[$key] -> {'alias_sub'} = $stackAlias;
-
         }
-
         $photos = Photo::all();
+
         return view('home', ['groupeService' => $allService, 'photos' => $photos, 'groupeServiceTest' => $allSericeMarge]);
     }
 
@@ -43,11 +42,11 @@ class HomeController extends Controller
                 array_push($stackName, $item->sub_service_name);
                 array_push($stackAlias, $item->sub_service_alias);
             }
-
             $allSericeMarge[$key] -> {'uslugi'} = $stackName;
             $allSericeMarge[$key] -> {'alias_sub'} = $stackAlias;
 
         }
+
         return view('offer', ['groupeService' => $allService,  'groupeServiceTest' => $allSericeMarge]);
     }
 
@@ -57,6 +56,7 @@ class HomeController extends Controller
             ->join('sub_services', 'services.id', '=', 'sub_services.service_id')
             ->select('services.name', 'services.id', 'sub_services.sub_service_name', 'sub_services.sub_service_alias')->where('services.alias', '=', $id)
             ->get();
+        $photo = Photo::where('alias', '=', $id)->get();
 
 
         if ($category -> isEmpty()){
@@ -64,7 +64,7 @@ class HomeController extends Controller
         }
 
         else{
-            return view('singleService' , ['singleService' => $category, 'category' => $group ]);
+            return view('singleService' , ['singleService' => $category, 'category' => $group, 'photo' => $photo ]);
         }
     }
 
@@ -80,7 +80,7 @@ class HomeController extends Controller
     {
         $prices = DB::table('services')
             ->join('sub_services', 'services.id', '=', 'sub_services.service_id')
-            ->select('services.name', 'sub_services.sub_service_name','sub_services.price' , 'sub_services.time' )
+            ->select('services.name', 'services.id' , 'sub_services.sub_service_name','sub_services.price' , 'sub_services.time' )
             ->get() ;
 
         $grouped = $prices->groupBy('name') -> toArray();

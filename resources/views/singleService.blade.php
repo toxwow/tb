@@ -74,6 +74,23 @@
             color: #51AB97
         }
 
+        div.wrapper-img-gallery{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div.wrapper-img-gallery > div.single-img{
+            flex: 1 0 22%; /* explanation below */
+            margin: 5px;
+            width: calc(100% / 4);
+            background-color: blue;
+        }
+
+        .img-fluid{
+            width: auto;
+            height: 100% !important;
+        }
+
     </style>
 @endpush
 
@@ -144,5 +161,40 @@
     @endcomponent
     </a>
 
+    @if(count($photo) >= 2)
+    @component('components.Titles.simple-title' , ['colorStatus' => 'no']))
+    @slot('title')
+        galeria
+    @endslot
+    @slot('description')@endslot
+    @endcomponent
 
+    <div class="container">
+        <div class="row">
+            <div class="wrapper-img-gallery">
+                <div class="single-img">
+                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox">
+                        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+                    </a>
+                </div>
+                <div class="single-img">
+                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox">
+                        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+                    </a>
+                </div>
+                <div class="single-img">
+                    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox">
+                        <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
 @endsection
+
+@push('script')
+
+
+
+@endpush
