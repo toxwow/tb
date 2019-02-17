@@ -20,7 +20,7 @@
 
     @component('components.Titles.simple-title' , ['colorStatus' => 'no']))
     @slot('title')
-        Cennik
+        cennik
     @endslot
     @slot('description')
 
