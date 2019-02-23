@@ -252,7 +252,7 @@
         var chatDiv = document.createElement('div');
         chatDiv.className = 'fb-customerchat';
         chatDiv.setAttribute('page_id', '293588224120247');
-        chatDiv.setAttribute('theme_color', '5aaf9c');
+        chatDiv.setAttribute('theme_color', '#5aaf9c');
         document.body.appendChild(chatDiv);
 
         window.fbAsyncInit = function() {
