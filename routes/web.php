@@ -27,6 +27,8 @@ Route::get('cennik', 'HomeController@prices') -> name('cennik');
 
 Route::get('o-nas', 'HomeController@about') -> name('o-nas');
 
+Route::get('galeria', 'HomeController@gallery') -> name('galeria');
+
 
 
 

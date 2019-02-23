@@ -24,7 +24,7 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('test/owl.carousel/dist/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('test/owl.carousel/dist/assets/owl.theme.default.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('test/ekko-lightbox/ekko-lightbox.css') }}" rel="stylesheet">
+    <link href="{{ asset('test/lightbox/css/lightbox.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -52,7 +52,7 @@
                     <li class="nav-item"><a href="{{route('oferta')}}" class="nav-link {{ request()->is('oferta*') ? 'active' : '' }}">OFERTA</a></li>
                     <li class="nav-item"><a href="{{ route('cennik') }}" class="nav-link {{ request()->is('cennik') ? 'active' : '' }}">CENNIK</a></li>
                     <li class="nav-item"><a href="{{'/posts'}}" class="nav-link disabled {{ request()->is('posts*') ? 'active' : '' }}">PODSŁUCHANE KONSULTACJE</a></li>
-                    <li class="nav-item nav-link disabled">GALERIA</li>
+                    <li class="nav-item"><a href="{{ route('galeria') }}" class="nav-link {{ request()->is('galeria') ? 'active' : '' }}">GALERIA</a></li>
                     <li class="nav-item nav-link disabled">KONTAKT</li>
                 </ul>
             </div>
@@ -76,7 +76,7 @@
 
 <script src="{{asset('test/jquery/dist/jquery.js')}}"></script>
 <script src="{{asset('test/owl.carousel/dist/owl.carousel.min.js')}}"></script>
-<script src="{{asset('test/ekko-lightbox/ekko-lightbox.js')}}"></script>
+<script src="{{asset('test/lightbox/js/lightbox.js')}}"></script>
 
 
 <script>

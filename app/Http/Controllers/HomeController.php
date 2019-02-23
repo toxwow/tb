@@ -93,5 +93,11 @@ class HomeController extends Controller
         return view('aboutUs');
     }
 
+    public function gallery()
+    {
+        $photo = Photo::all();
+        return view('gallery', ['photo' => $photo]);
+    }
+
 
 }
