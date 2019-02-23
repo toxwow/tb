@@ -6,6 +6,7 @@
 
         div.wrapper-img{
             position: relative;
+            cursor: pointer;
         }
 
         div.bg-effect{
@@ -21,6 +22,7 @@
             background-color: rgba(0, 0, 0, 0.4);
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
+            cursor: pointer;
         }
 
         div.wrapper-img:hover .bg-effect {
@@ -48,7 +50,7 @@
         <div class="row">
             @foreach($photo as $item)
                 <div class="col-sm-6 col-md-3">
-                    <a href="{{ asset('img/slider/'.$item->path) }}" data-lightbox="image-1" data-title="{{$item->name}}">
+                    <a href="{{ asset('img/slider/'.$item->path) }}" data-lightbox="image-1" data-title="{{$item->name}}" style="cursor: pointer">
                         <div class="wrapper-img">
                             <img src="{{ asset('img/slider/'.$item->path) }}" alt="" style="width: 100%;">
                             <div class="bg-effect"></div>
