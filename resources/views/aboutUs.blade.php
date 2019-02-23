@@ -117,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 order-first order-md-last">
                 <div class="img-wrapper-person">
                     <img src="{{ asset('img/team/02.jpg') }}" alt="">
                 </div>

@@ -29,6 +29,12 @@ Route::get('o-nas', 'HomeController@about') -> name('o-nas');
 
 Route::get('galeria', 'HomeController@gallery') -> name('galeria');
 
+Route::get('kontakt', function (){
+    return view('contact');
+}) -> name('kontakt');
+
+
+
 
 
 

@@ -53,7 +53,7 @@
                     <li class="nav-item"><a href="{{ route('cennik') }}" class="nav-link {{ request()->is('cennik') ? 'active' : '' }}">CENNIK</a></li>
                     <li class="nav-item"><a href="{{'/posts'}}" class="nav-link disabled {{ request()->is('posts*') ? 'active' : '' }}">PODSŁUCHANE KONSULTACJE</a></li>
                     <li class="nav-item"><a href="{{ route('galeria') }}" class="nav-link {{ request()->is('galeria') ? 'active' : '' }}">GALERIA</a></li>
-                    <li class="nav-item nav-link disabled">KONTAKT</li>
+                    <li class="nav-item"><a href="{{ route('kontakt') }}" class="nav-link {{ request()->is('kontakt') ? 'active' : '' }}">KONTAKT</a></li></li>
                 </ul>
             </div>
        </div>
@@ -88,8 +88,11 @@
         loop:true,
         margin:30,
         responsive:{
-            600:{
-                items:3
+            400:{
+                items:2
+            },
+            800:{
+                items: 3
             }
         }
     });

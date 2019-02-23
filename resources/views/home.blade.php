@@ -89,7 +89,15 @@
             opacity: 1;
         }
 
+        @media (max-width: 575.98px) {
+            .img-wrapper-category{
+                display: none;
+            }
 
+            .wrapper-text-category{
+              width: 100% !important;
+          }
+        }
 
     </style>
 @endpush
@@ -113,7 +121,7 @@
     <div class="container">
         <div class="row">
             @foreach($groupeServiceTest as $key=>$service)
-                <div class="col-11 mx-auto mb-1">
+                <div class="col-12 col-md-11 mx-auto mb-1">
                     <div class="d-flex wrapper-single-category">
                         <div class="img-wrapper-category" style="">
                             <div style="background-image: url('img/category/{{$service->image}}');">
@@ -121,8 +129,8 @@
                             </div>
                         </div>
                         <div class='wrapper-text-category'>
-                            <div class="title d-flex justify-content-between">
-                                <p> {{$service->name}}</p>
+                            <div class="title d-flex justify-content-between align-items-center">
+                                <p style="margin-bottom: 0;"> {{$service->name}}</p>
                                 <div class="icon-toogle"></div>
                             </div>
                             <ul class="subCategory">
@@ -181,7 +189,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-sm-12 col-md-8 order-last order-md-first">
                 <div class="wrapper-map">
                     <div id="map"></div>
                     <div class="map-bg"></div>
@@ -189,7 +197,7 @@
 
 
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-4 order-first order-md-last mb-3">
                 <p class="m-0 mb-1">Anna Taborska</p>
                 <p class="m-0 mb-1">Plac Kazimierza Wielkiego 11</p>
                 <p class="m-0">32-005 Niepołomice</p>

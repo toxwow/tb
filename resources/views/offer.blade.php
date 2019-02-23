@@ -1,6 +1,17 @@
 @extends('layouts.main')
 @section('title', '')
 @push('css')
+    <style>
+        @media (max-width: 575.98px) {
+            .img-wrapper-category{
+                display: none;
+            }
+
+            .wrapper-text-category{
+                width: 100% !important;
+            }
+        }
+    </style>
 @endpush
 
 @section('top')

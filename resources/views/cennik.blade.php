@@ -14,7 +14,9 @@
     </style>
 @endpush
 
-
+@section('top')
+    <div class="line"></div>
+@endsection
 
 @section('content')
 
