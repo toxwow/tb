@@ -49,7 +49,7 @@
     <div class="container">
         <div class="row">
             @foreach($photo as $item)
-                <div class="col-sm-6 col-md-3">
+                <div class="col-sm-6 col-md-3 mb-3">
                     <a href="{{ asset('img/slider/'.$item->path) }}" data-lightbox="image-1" data-title="{{$item->name}}" style="cursor: pointer">
                         <div class="wrapper-img">
                             <img src="{{ asset('img/slider/'.$item->path) }}" alt="" style="width: 100%;">

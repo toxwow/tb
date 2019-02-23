@@ -53,12 +53,12 @@
 
     <div class="container" style="margin-top: 50px;">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-12 col-md-8">
                 <p class="titleServiceGroupe"><a href="{{route('test', ['id' => $serviceGroupe[0]->alias])}}">{{$serviceGroupe[0]->name}}</a></p>
                 <h1 class="titleSingleService">{{$service[0]->sub_service_name}}</h1>
                 <div class="wrapper-opis" style="text-align: justify">{!!  $service[0]->description !!}</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-12 col-md-4 mt-5">
                 <div class="menu-rest-wrapper">
                     <h4>Nasza oferta</h4>
                     <div class="menu-content">
