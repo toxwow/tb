@@ -248,30 +248,7 @@
         }
     </script>
 
-    <script>
-        var chatDiv = document.createElement('div');
-        chatDiv.className = 'fb-customerchat';
-        chatDiv.setAttribute('page_id', '293588224120247');
-        chatDiv.setAttribute('theme_color', '#5aaf9c');
-        document.body.appendChild(chatDiv);
 
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId            : '850652791742367',
-                autoLogAppEvents : true,
-                xfbml            : true,
-                version          : 'v3.2'
-            });
-        };
-
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFi6RA4sKNf00vPBybzIf3Sypjw-11JiE&callback=initMap">
     </script>
