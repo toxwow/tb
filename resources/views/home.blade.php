@@ -128,21 +128,32 @@
 
                             </div>
                         </div>
+                        @if($service -> uslugi == null)
                         <div class='wrapper-text-category'>
-                            <div class="title d-flex justify-content-between align-items-center">
-                                <p style="margin-bottom: 0;"> {{$service->name}}</p>
-                                <div class="icon-toogle"></div>
-                            </div>
-                            <ul class="subCategory">
-                                @foreach($service->uslugi as $key =>  $test)
-                                    <li><a href="{{route('subcategory', ['id' => $service->alias ,'id2' => $service->alias_sub[$key]])}}">{{$test}}</a></li>
-                                @endforeach
-                            </ul>
+                            <a href="{{route('test', ['id' => $service->alias])}}">
+                                <div class="title d-flex justify-content-between align-items-center">
+                                    <p style="margin-bottom: 0;"> {{$service->name}}</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-            @endforeach
+                @else
+                <div class='wrapper-text-category'>
+                    <div class="title d-flex justify-content-between align-items-center">
+                        <p style="margin-bottom: 0;"> {{$service->name}}</p>
+                        <div class="icon-toogle"></div>
+                    </div>
+                    <ul class="subCategory">
+                        @foreach($service->uslugi as $key =>  $test)
+                            <li><a href="{{route('subcategory', ['id' => $service->alias ,'id2' => $service->alias_sub[$key]])}}">{{$test}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+                @endif
+        @endforeach
         </div>
     </div>
     @component('components.Titles.simple-title' , ['colorStatus' => 'yes']))

@@ -29,38 +29,39 @@
     @endslot
     @endcomponent
 
-
     <div class="container">
         <div class="row">
 
-                @foreach($prices as $key => $item)
-                <div class="col-12" style="margin-bottom: 40px;">
-                    <h4 class="title">{{$key}}</h4>
+                @foreach($priceNew as $item)
+                    @if(!$item -> phone ->isEmpty())
+                    <div class="col-12" style="margin-bottom: 40px;">
+                        <h4 class="title">{{$item -> name}}</h4>
 
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th scope="" style="width:60%;">Rodzaj zabiegu</th>
-                            <th scope="col" style="width: 20%;">Czas trwania</th>
-                            <th scope="col" style="width: 20%;">Cena</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-
-
-                        @foreach($item as $key => $single)
+                        <table class="table table-striped">
+                            <thead>
                             <tr>
-                                <td>{{$single->sub_service_name}}</td>
-                                <td>{{$single->time}} min</td>
-                                <td>{{ number_format($single->price, 0, ',' , '.')}} zł</td>
+                                <th scope="" style="width:60%;">Rodzaj zabiegu</th>
+                                <th scope="col" style="width: 20%;">Cena</th>
                             </tr>
+                            </thead>
+                            <tbody>
 
 
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
-                @endforeach
+                            @foreach($item -> phone as $single)
+                                <tr>
+                                    <td>{{$single->name}}</td>
+                                    <td>{{$single->price}}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+
+                    @endif
+
+
+            @endforeach
+
 
         </div>
     </div>

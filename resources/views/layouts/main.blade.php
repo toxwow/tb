@@ -24,7 +24,7 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('test/owl.carousel/dist/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('test/owl.carousel/dist/assets/owl.theme.default.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('test/lightbox/css/lightbox.css') }}" rel="stylesheet">
+    {{--<link href="{{ asset('test/lightbox/css/lightbox.css') }}" rel="stylesheet">--}}
 
 </head>
 <body>
@@ -76,7 +76,6 @@
 
 <script src="{{asset('test/jquery/dist/jquery.js')}}"></script>
 <script src="{{asset('test/owl.carousel/dist/owl.carousel.min.js')}}"></script>
-<script src="{{asset('test/lightbox/js/lightbox.js')}}"></script>
 
 
 <script>

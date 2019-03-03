@@ -5,7 +5,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
 require('./bootstrap');
+
+import 'lightbox2';
 
 // window.Vue = require('vue');
 
@@ -25,7 +28,7 @@ require('./bootstrap');
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-// import 'owl.carousel';
+//
 
 
 

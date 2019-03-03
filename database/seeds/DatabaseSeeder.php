@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
          $this->call([
              ServicesTableSeeder::class,
              SubServiceTableSeeder::class,
-             PhotoTableSeeder::class]);
+             PhotoTableSeeder::class,
+             PricesTableSeeder::class]);
     }
 }

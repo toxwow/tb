@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Photo;
+use App\Prices;
 use App\Service;
 use App\SubService;
 use Illuminate\Http\Request;
@@ -51,6 +52,7 @@ class HomeController extends Controller
     }
 
     public function category($id){
+        $serviceAll = Service::all();
         $group = Service::where('alias', '=', $id) ->get();
         $category = DB::table('services')
             ->join('sub_services', 'services.id', '=', 'sub_services.service_id')
@@ -59,12 +61,12 @@ class HomeController extends Controller
         $photo = Photo::where('alias', '=', $id)->get();
 
 
-        if ($category -> isEmpty()){
+        if ($group -> isEmpty()){
             abort(403, 'Page not found');
         }
 
         else{
-            return view('singleService' , ['singleService' => $category, 'category' => $group, 'photo' => $photo ]);
+            return view('singleService' , ['singleService' => $category, 'category' => $group, 'photo' => $photo, 'serviceAll' => $serviceAll]);
         }
     }
 
@@ -78,14 +80,10 @@ class HomeController extends Controller
 
     public function prices()
     {
-        $prices = DB::table('services')
-            ->join('sub_services', 'services.id', '=', 'sub_services.service_id')
-            ->select('services.name', 'services.id' , 'sub_services.sub_service_name','sub_services.price' , 'sub_services.time' )
-            ->get() ;
+        $pricesNew = Service::with('phone')->get()->groupBy('services.name') ->first();
 
-        $grouped = $prices->groupBy('name') -> toArray();
 
-        return view('cennik', ['prices' => $grouped]);
+        return view('cennik', ['priceNew' => $pricesNew]);
     }
 
     public function about()

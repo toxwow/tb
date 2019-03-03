@@ -12,17 +12,58 @@ class ServicesTableSeeder extends Seeder
     public function run()
     {
         DB::table('services')->insert([
-            'name' => 'Medycyna estetyczna',
-            'alias' => 'medycyna-estetyczna',
-            'image' => '1.jpg',
-            'main_description' => 'Medycyna estetyczna zajmuje się w głównej mierze profilaktyką starzenia się skóry oraz rekonstrukcjami mającymi odtworzyć stan sprzed tego procesu. Mówiąc kompleksowo, poprzez drobne zabiegi jak botoks czy powiększanie ust, ma odświeżyć naszą skórę i pozbyć się defektów. Terapią można poprawić drobne felery estetyczne, które wpływają niepochlebnie na naszą samoocenę – szramy, zapadnięte policzki, zbyt małe piersi, blizny powypadkowe, znamiona dziedziczne itp.'
+            'name' => 'Makijaż permanentny',
+            'alias' => 'makijaz-permanentny',
+            'image' => '1.png',
+            'main_description' => '
+            Makijaż permanentny (Permanent make-up) stanowi świetne rozwiązanie dla osób, które pragną podkreślić swoje atuty urody lub skorygować lub zatuszować ewentualne niedoskonałości.  Jest doskonałym rozwiązaniem dla kobiet chcących zaoszczędzić czas podczas porannej toalety, dla tych, które pragną wyglądać nienagannie w każdych okolicznościach, czy to na basenie, czy na plaży, o każdej porze dnia.
+            '
         ]);
 
         DB::table('services')->insert([
-            'name' => 'Elektrokoagulacja',
-            'alias' => 'elektrokoagulacja',
-            'image' => '2.jpg',
-            'main_description' => 'Zabieg elektrokoagulacji polega na ścinaniu białka zmian skórnych poprzez działanie prądem wysokiej częstotliwości. Wytwarzane w czasie działania prądem ciepło powoduje uszkodzenie (koagulację, ścinanie) białek zlokalizowanych w tkance m.in. włókniaków, brodawek łojotokowych, brodawek płaskich, punktów rubinowych i naczyniaków gwiaździstych.'
+            'name' => 'Odnowa biologiczna THALGO',
+            'alias' => 'odnowa-biologiczna-thalgo',
+            'image' => '2.png',
+            'main_description' => 'Francuska kosmetyczna marka Thalgo, to jedna z najbardziej znanych i cenionych na całym świecie profesjonalnych marek kosmetycznych, autor holistycznej filozofii, a także wielu patentów, które zrewolucjonizowały profesjonalny rynek kosmetyczny. Ponad 40-letnie doświadczenie, bogata oferta zabiegowa i najwyższej jakości preparaty na bazie alg i innych morskich składników sprawiły, że już od wielu lat firma Thalgo jest również światowym potentatem w dziedzinie SPA i Thalassoterapii. Z logo Thalgo pracują najbardziej prestiżowe hotele m.in. Burj-Al.-Arab Tower w Dubaju, Le Meridien Limassol na Cyprze, Blue Palace na Krecie, The Oriental Bangkok w Tajlandii, Villa Thalgo w Australii.'
+        ]);
+
+        DB::table('services')->insert([
+            'name' => 'Peelingi',
+            'alias' => 'Peelingi',
+            'image' => '3.png',
+            'main_description' => 'Głęboko oczyszczający zabieg, który usuwa obumarły naskórek. W efekcie skóra  jest rozświetlona, odświeżona. Zabieg sprzyja wchłanianiu substancji aktywnych  z kosmetyków. Skóra po zabiegu jest  wygładzona, ujędrniona i nawilżona.'
+        ]);
+
+        DB::table('services')->insert([
+            'name' => 'Medycyna estetyczna',
+            'alias' => 'medycyna-estetyczna',
+            'image' => '4.png',
+            'main_description' => '
+                W ofercie znajdą Państwo:
+                <ul>
+                    <li>konsultacja</li>
+                    <li>botox</li>
+                    <li>kwas hialuronowy</li>
+                    <li>nici</li>
+                    <li>hydroksyapatyt</li>
+                    <li>lifting De Maio</li>
+                    <li>Lip Flip</li>
+                    <li>indycza szyja</li>
+                    <li>korekta dołów skroniowych i łuków jarzmowych</li>
+                    <li>wolumetria</li>
+                    <li>podkreślenie linii żuchwy</li>
+                    <li>modelowanie kształtu i objętości ust</li>
+                    <li>lifting twarzy</li>
+                    <li>rewitalizacja skóry, zagęszczenie, eliminacja drobnych zmarszczek</li>
+                    <li>dodawanie objętości</li>
+                    <li>korekta kształtu nosa</li>
+                    <li>rewitalizacja dłoni</li>
+                    <li>usuwanie zmarszczek mimicznych</li>
+                    <li>zabiegi na okolice oczu</li>
+                    <li>lipoliza iniekcyjna</li>
+                    </ul>
+
+            '
         ]);
     }
 }

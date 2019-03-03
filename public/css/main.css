@@ -198,6 +198,18 @@ div.line{
     font-weight: 300;
 }
 
+.wrapper-text-category > a{
+    text-decoration: none;
+}
+
+.wrapper-text-category > a > div.title{
+    text-decoration: none;
+    color: #1a1a1a;
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
 .icon-toogle{
     width: 15px;
     height: 15px;
