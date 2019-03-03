@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98393b84-9f63-4514-aee0-d49ba210e5bf" name="Default Changelist" comment="" />
+    <list default="true" id="98393b84-9f63-4514-aee0-d49ba210e5bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +15,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="121" column="9" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/singleService.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,7 +45,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/PricesTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
+            <state relative-caret-position="380">
               <caret line="254" column="27" selection-start-line="254" selection-start-column="27" selection-end-line="254" selection-end-column="27" />
             </state>
           </provider>
@@ -73,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/SubServiceTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="396" column="30" lean-forward="true" selection-start-line="396" selection-start-column="30" selection-end-line="396" selection-end-column="30" />
+            <state relative-caret-position="164">
+              <caret line="390" column="85" selection-start-line="390" selection-start-column="85" selection-end-line="390" selection-end-column="85" />
               <folding>
                 <element signature="e#7614#7652#0" expanded="true" />
               </folding>
@@ -137,7 +148,6 @@
         <option value="$PROJECT_DIR$/resources/views/aboutUs.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/gallery.blade.php" />
         <option value="$PROJECT_DIR$/resources/sass/app.scss" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/resources/views/singleSubService.blade.php" />
@@ -153,6 +163,7 @@
         <option value="$PROJECT_DIR$/database/seeds/PricesTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/ServicesTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/SubServiceTableSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
       </list>
     </option>
   </component>
@@ -444,17 +455,18 @@
       <workItem from="1550869575079" duration="3000" />
       <workItem from="1550936580605" duration="8346000" />
       <workItem from="1551105298529" duration="977000" />
-      <workItem from="1551389537207" duration="16112000" />
+      <workItem from="1551389537207" duration="16327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105327000" />
+    <option name="totallyTimeSpent" value="105542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33404863" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33404863" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -469,7 +481,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28674698" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28674698" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -635,13 +647,6 @@
     <entry file="file://$PROJECT_DIR$/public/css/app.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -735,13 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cennik.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="35" column="39" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -781,20 +779,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/SubServiceTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="390" column="85" selection-start-line="390" selection-start-column="85" selection-end-line="390" selection-end-column="85" />
+          <folding>
+            <element signature="e#7614#7652#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cennik.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/PricesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
+        <state relative-caret-position="380">
           <caret line="254" column="27" selection-start-line="254" selection-start-column="27" selection-end-line="254" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/SubServiceTableSeeder.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="396" column="30" lean-forward="true" selection-start-line="396" selection-start-column="30" selection-end-line="396" selection-end-column="30" />
-          <folding>
-            <element signature="e#7614#7652#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="290">
+          <caret line="121" column="9" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
         </state>
       </provider>
     </entry>

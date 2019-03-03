@@ -98,9 +98,10 @@
 </script>
 
 <script>
+
     var chatDiv = document.createElement('div');
     chatDiv.className = 'fb-customerchat';
-    chatDiv.setAttribute('page_id', '293588224120247');
+    chatDiv.setAttribute('page_id', '130125320377037');
     chatDiv.setAttribute('theme_color', '#5aaf9c');
     chatDiv.setAttribute('logged_in_greeting', 'Witaj, jak możemy Ci pomóc?');
     chatDiv.setAttribute('logged_out_greeting', 'Witaj, jak możemy Ci pomóc?');
