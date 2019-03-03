@@ -388,7 +388,7 @@ Po zabiegu może wystąpić:
                     <p>
                     Można w tym samym dniu wykonać makijaż, idealnie sprawdzi się przed wielkim wyjściem.</p>
                     <div class='embed-responsive embed-responsive-16by9'>
-  <iframe class='embed-responsive-item' src='https://www.youtube.com/watch?v=OIK5Ni6EvPs' allowfullscreen></iframe>
+  <iframe class='embed-responsive-item' src='http://www.youtube.com/watch?v=OIK5Ni6EvPs' allowfullscreen></iframe>
 </div>
                 "
         ]);
