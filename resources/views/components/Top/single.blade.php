@@ -1,17 +1,16 @@
-{{--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">--}}
-
-    {{--<div class="carousel-inner">--}}
-        {{--<div class="carousel-item active">--}}
-            {{--<img class="d-block w-100" src={{'img/bg.png'}} alt="FirstSlide">--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</div>--}}
-
 @push('css')
 
     <style>
+        .wrapper-slider{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
         .button-wrapper{
             margin-top: 25px;
+            display: flex;
         }
 
         .button-wrapper > a.btn.btn-custom {
@@ -37,8 +36,39 @@
 
         .button-wrapper > a.btn.btn-custom.white{
             background-color: white;
-
             color: #535353;
+        }
+
+        p.lead{
+            width: 60%;
+            margin-top: 15px;
+            color: #646464;
+            line-height: 33px
+        }
+
+        @media (max-width: 720.98px) {
+            p.lead{
+                width: 100%;
+            }
+
+            .wrapper-slider{
+                text-align: center;
+            }
+            .button-wrapper{
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 420.98px) {
+
+            .button-wrapper {
+                flex-direction: column;
+            }
+
+            .button-wrapper a.btn{
+                width: 70%;
+                margin: 10px auto !important;
+            }
         }
 
 
@@ -49,13 +79,22 @@
 
 <div class="jumbotron jumbotron-fluid" style="background: none; background-image: url({{'img/bg.png'}}); background-repeat: no-repeat; background-position: center;  ">
     <div class="container" style="height: 440px">
-        <div style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+        <div class="wrapper-slider" style="">
             <h1 class="display-5" style="font-family: 'Times New Roman'; font-weight: 600; color: #535353">Spełniamu marzenia, nie przekraczamu granic</h1>
-            <p class="lead" style="width: 60%; margin-top: 15px; color: #646464; line-height: 33px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque esse fuga impedit quibusdam suscipit!</p>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque esse fuga impedit quibusdam suscipit!</p>
             <div class="button-wrapper">
-                <a class="btn btn-custom primary">OFERTA</a>
-                <a class="btn btn-custom white">KONTAKT</a>
+                <a class="btn btn-custom primary" href="{{route('oferta')}}">OFERTA</a>
+                <a class="btn btn-custom white" href="{{ route('kontakt') }}">KONTAKT</a>
             </div>
         </div>
     </div>
 </div>
+
+
+@push('script')
+
+    <script>
+    </script>
+
+
+@endpush

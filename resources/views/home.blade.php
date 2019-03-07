@@ -124,7 +124,7 @@
                 <div class="col-12 col-md-11 mx-auto mb-1">
                     <div class="d-flex wrapper-single-category">
                         <div class="img-wrapper-category" style="">
-                            <div style="background-image: url('img/category/{{$service->image}}');">
+                            <div style="background-image: url('img/category/{{$service->image}}'); background-position: 30% 30%">
 
                             </div>
                         </div>
