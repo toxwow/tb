@@ -124,7 +124,7 @@
                 <div class="col-12 col-md-11 mx-auto mb-1">
                     <div class="d-flex wrapper-single-category">
                         <div class="img-wrapper-category" style="">
-                            <div style="background-image: url('img/category/{{$service->image}}'); background-position: 30% 30%">
+                            <div style="background-image: url('img/category/{{$service->image}}');">
 
                             </div>
                         </div>
@@ -173,7 +173,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
-                    @foreach($photos as $photo)
+                    @foreach($photos->shuffle()->slice(0, 4) as $photo)
                         <div class="single-img">
                             <img src="{{asset('img/slider/'.$photo -> path)}}" alt="{{$photo->alt}}">
                             <div class="blur-wrapper">
