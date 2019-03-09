@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Service;
 use App\SubService;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ServiceController extends Controller
 {
@@ -38,6 +40,21 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function showAll()
+    {
+        if (Auth::check()) {
+
+            $allService = Service::all();
+            return view('admin.category', ['allService' => $allService]);
+        }
+
+        else{
+            return redirect ('/');
+        }
+    }
+
+
     public function create()
     {
         //
@@ -62,7 +79,15 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        //
+        if (Auth::check()) {
+            $service = Service::findOrFail($id);
+            $findSubService = SubService::where('service_id', $service->id)->get();
+            return view('admin.showCategory', ['service' => $service, 'test' => $findSubService]);
+        }
+
+        else{
+            return redirect ('/');
+        }
     }
 
     /**
@@ -73,7 +98,14 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        //
+        if (Auth::check()) {
+            $service = Service::findOrFail($id);
+            return view('admin.editCategory', ['service' => $service]);
+        }
+
+        else{
+            return redirect ('/');
+        }
     }
 
     /**
@@ -85,7 +117,17 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if (Auth::check()) {
+            $service = Service::find($id);
+            $service->name = $request->name;
+            $service->main_description = $request->description;
+            $service->save();
+            return redirect('/admin/kategorie/'. $id);
+        }
+
+        else{
+            return redirect ('/');
+        }
     }
 
     /**

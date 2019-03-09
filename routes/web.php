@@ -41,3 +41,13 @@ Auth::routes();
 Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout') ->name('logoutUser');
 
+
+//Admin
+
+Route::get('/admin/kategorie', 'ServiceController@showAll') -> name('categoryAdmin');
+Route::get('/admin/kategorie/{id}', 'ServiceController@show') -> name('categorySingleAdmin');
+Route::get('/admin/kategorie/{id}/edit', 'ServiceController@edit')->name('categorySingleAdmin-edit');
+Route::match(['put', 'patch'], '/admin/kategorie/{id}','ServiceController@update');
+
+
+

@@ -6,6 +6,7 @@ use App\Photo;
 use App\Service;
 use App\SubService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {

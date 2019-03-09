@@ -172,7 +172,7 @@
                         <a class="active" href="{{route('test', ['id' => $category[0]->alias])}}">{{$category[0]->name}}</a>
                     </div>
                     <h4>{{$category[0]->name}}</h4>
-                    <p class="text-justify main-description">{{$category[0]->main_description}}</p>
+                    <p class="text-justify main-description">{!! $category[0]->main_description !!}</p>
                 </div>
                 <div class="col-12 col-md-6 offset-md-1">
                     <div class="img-wrapper-category">
