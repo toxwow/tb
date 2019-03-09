@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
              ServicesTableSeeder::class,
              SubServiceTableSeeder::class,
              PhotoTableSeeder::class,
-             PricesTableSeeder::class]);
+             PricesTableSeeder::class,
+             UsersTableSeeder::class]);
     }
 }
