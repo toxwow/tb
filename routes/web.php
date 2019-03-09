@@ -15,19 +15,19 @@
 //    return view('welcome');
 //});
 
-Route::get('/', 'HomeController@index') -> name('home');
+Route::get('/', 'MainController@index') -> name('home');
 
-Route::get('oferta', 'HomeController@oferta') -> name('oferta');
+Route::get('oferta', 'ServiceController@index') -> name('oferta');
 
-Route::get('oferta/{id}', 'HomeController@category') -> name('test');
+Route::get('oferta/{id}', 'MainController@category') -> name('test');
 
-Route::get('oferta/{id}/{id2}', 'HomeController@subCategory') -> name('subcategory');
+Route::get('oferta/{id}/{id2}', 'MainController@subCategory') -> name('subcategory');
 
-Route::get('cennik', 'HomeController@prices') -> name('cennik');
+Route::get('cennik', 'MainController@prices') -> name('cennik');
 
-Route::get('o-nas', 'HomeController@about') -> name('o-nas');
+Route::get('o-nas', 'MainController@about') -> name('o-nas');
 
-Route::get('galeria', 'HomeController@gallery') -> name('galeria');
+Route::get('galeria', 'MainController@gallery') -> name('galeria');
 
 Route::get('kontakt', function (){
     return view('contact');
@@ -36,7 +36,8 @@ Route::get('kontakt', function (){
 
 
 
+Auth::routes();
 
-
-
+Route::get('/admin', 'HomeController@index')->name('admin');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout') ->name('logoutUser');
 

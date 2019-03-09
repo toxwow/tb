@@ -29,6 +29,18 @@
 </head>
 <body>
 <div id="app">
+    @if (Auth::check())
+        <div style="width: 100%; background-color: #1b1e21">
+            <div style="color: white; padding: 10px 0;  margin-right: 20px; display: flex; justify-content: flex-end">
+                <p style="font-weight: 600; margin: 0;">Witaj {{Auth::user()->name}}</p>
+                <p style="margin: 0; margin: 0 30px;"> <a href="{{route('admin')}}">przejdź do panelu</a></p>
+                <p style="margin: 0"><a href="{{route('logoutUser')}}">Wyloguj</a></p>
+            </div>
+        </div>
+
+    @else
+
+    @endif
     <div class="img-wrapper">
         <div class="container">
             <div class="row">
