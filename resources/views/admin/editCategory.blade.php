@@ -30,7 +30,6 @@
 @endsection
 
 @push('script')
-    @include('ckfinder::setup')
 
     <script>
         // CKEDITOR.replace( 'editor1' );
@@ -38,10 +37,7 @@
 
         ClassicEditor
             .create( document.querySelector( '#editor' ),{
-                ckfinder: {
-                    uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
-                },
-                toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ]
+
             } )
             .then( newEditor => {
                 editor = newEditor;
