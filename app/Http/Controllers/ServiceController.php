@@ -68,7 +68,26 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (Auth::check()) {
+
+            $upload_path = 'public/img/category';
+            $name = $request->file('img')->hashName();
+            $path = $request->file('img')->move(public_path('img/category/'), $name);
+            $alias_new = str_replace(' ', '-', $request->name);
+            $alias_new = strtolower($alias_new);
+            $service = new Service();
+            $service->name = $request->name;
+            $service->alias = $alias_new;
+            $service->image = $name;
+            $service->main_description = $request->description;
+            $service-> save();
+            return redirect('/admin/kategorie/');
+        }
+
+        else{
+            return redirect ('/');
+        }
+
     }
 
     /**
@@ -80,7 +99,7 @@ class ServiceController extends Controller
     public function show($id)
     {
         if (Auth::check()) {
-            $service = Service::findOrFail($id);
+            $service = Service::find($id);
             $findSubService = SubService::where('service_id', $service->id)->get();
             return view('admin.showCategory', ['service' => $service, 'test' => $findSubService]);
         }
@@ -118,10 +137,23 @@ class ServiceController extends Controller
     public function update(Request $request, $id)
     {
         if (Auth::check()) {
+
+
             $service = Service::find($id);
             $service->name = $request->name;
             $service->main_description = $request->description;
+
+
+            if ($request->file('img')){
+                $upload_path = '/public/img/category';
+
+                $name = $request->file('img')->hashName();
+                $path = $request->file('img')->move(public_path('img/category/'), $name);
+                $service->image = $name;
+            }
             $service->save();
+
+
             return redirect('/admin/kategorie/'. $id);
         }
 
@@ -138,6 +170,7 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Service::where(['id' => $id])->delete();
+        return redirect('/admin/kategorie/');
     }
 }

@@ -19,9 +19,9 @@ Route::get('/', 'MainController@index') -> name('home');
 
 Route::get('oferta', 'ServiceController@index') -> name('oferta');
 
-Route::get('oferta/{id}', 'MainController@category') -> name('test');
+Route::get('oferta/{id}', 'SubServiceController@category') -> name('test');
 
-Route::get('oferta/{id}/{id2}', 'MainController@subCategory') -> name('subcategory');
+Route::get('oferta/{id}/{id2}', 'SubServiceController@subCategory') -> name('subcategory');
 
 Route::get('cennik', 'MainController@prices') -> name('cennik');
 
@@ -44,10 +44,29 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout') ->name
 
 //Admin
 
+//Category
+
 Route::get('/admin/kategorie', 'ServiceController@showAll') -> name('categoryAdmin');
 Route::get('/admin/kategorie/{id}', 'ServiceController@show') -> name('categorySingleAdmin');
 Route::get('/admin/kategorie/{id}/edit', 'ServiceController@edit')->name('categorySingleAdmin-edit');
 Route::match(['put', 'patch'], '/admin/kategorie/{id}','ServiceController@update');
+Route::get('/admin/dodaj-kategorie', function (){
+    return view('admin.addCategory');
+}) -> name('addNewCategory');
+
+Route::post( '/admin/kategorie/dodaj','ServiceController@store');
+Route::delete('/admin/kategorie/{id}', 'ServiceController@destroy');
+
+//SubCategory
+
+Route::get('/admin/podkategorie', 'SubServiceController@showAll') -> name('subCategoryAdmin');
+Route::get('/admin/podkategorie/{id}/edit', 'SubServiceController@edit')->name('subCategoryAdmin-edit');
+Route::match(['put', 'patch'], '/admin/podkategorie/{id}','SubServiceController@update');
+Route::get('/admin/dodaj-podkategorie', 'SubServiceController@addView') -> name('addNewSubcategory');
+
+Route::post( '/admin/podkategorie/dodaj','SubServiceController@store');
+Route::delete('/admin/podkategorie/{id}', 'SubServiceController@destroy');
+
 
 
 
