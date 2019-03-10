@@ -11,7 +11,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-12">
-            <form action="{{ url('admin/kategorie/'. $service->id) }}" method="POST">
+            <form action="{{ url('admin/kategorie/'. $service->id) }}" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     {{ csrf_field() }}
                     {{method_field('PATCH')}}
@@ -30,18 +30,27 @@
 @endsection
 
 @push('script')
+    @include('ckfinder::setup')
+
     <script>
         // CKEDITOR.replace( 'editor1' );
         let editor;
 
         ClassicEditor
-            .create( document.querySelector( '#editor' ) )
+            .create( document.querySelector( '#editor' ),{
+                ckfinder: {
+                    uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+                },
+                toolbar: [ 'ckfinder', 'imageUpload', '|', 'heading', '|', 'bold', 'italic', '|', 'undo', 'redo' ]
+            } )
             .then( newEditor => {
                 editor = newEditor;
             } )
             .catch( error => {
                 console.error( error );
             } );
+
+
 
     </script>
 @endpush
