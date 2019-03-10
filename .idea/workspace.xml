@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="98393b84-9f63-4514-aee0-d49ba210e5bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/anna-taborska-22.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/anna-taborska-22.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
@@ -15,6 +16,9 @@
       <change beforePath="$PROJECT_DIR$/resources/views/admin/editCategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/editCategory.blade.php" afterDir="false" />
 >>>>>>> 2162e2625bed0ac0022cdfbe126a2cdd11c912d5
     </list>
+=======
+    <list default="true" id="98393b84-9f63-4514-aee0-d49ba210e5bf" name="Default Changelist" comment="" />
+>>>>>>> bb14d4ca06d1821f265cd33330d5f6f7ee27b833
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,9 +132,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/editCategory.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="358">
               <caret line="42" column="114" selection-start-line="42" selection-start-column="114" selection-end-line="42" selection-end-column="114" />
 >>>>>>> 2162e2625bed0ac0022cdfbe126a2cdd11c912d5
+=======
+            <state relative-caret-position="495">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+>>>>>>> bb14d4ca06d1821f265cd33330d5f6f7ee27b833
             </state>
           </provider>
         </entry>
@@ -444,12 +453,15 @@
             <path>
               <item name="anna-taborska-22" type="b2602c69:ProjectViewProjectNode" />
               <item name="anna-taborska-22" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="anna-taborska-22" type="b2602c69:ProjectViewProjectNode" />
               <item name="anna-taborska-22" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> bb14d4ca06d1821f265cd33330d5f6f7ee27b833
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -547,19 +559,27 @@
       <workItem from="1551992347393" duration="1963000" />
       <workItem from="1552133141299" duration="1086000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1552147869946" duration="5291000" />
 =======
       <workItem from="1552147869946" duration="16157000" />
 >>>>>>> 2162e2625bed0ac0022cdfbe126a2cdd11c912d5
+=======
+      <workItem from="1552147869946" duration="16947000" />
+>>>>>>> bb14d4ca06d1821f265cd33330d5f6f7ee27b833
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="118224000" />
 =======
     <option name="totallyTimeSpent" value="129090000" />
 >>>>>>> 2162e2625bed0ac0022cdfbe126a2cdd11c912d5
+=======
+    <option name="totallyTimeSpent" value="129880000" />
+>>>>>>> bb14d4ca06d1821f265cd33330d5f6f7ee27b833
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -983,9 +1003,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/editCategory.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="358">
           <caret line="42" column="114" selection-start-line="42" selection-start-column="114" selection-end-line="42" selection-end-column="114" />
 >>>>>>> 2162e2625bed0ac0022cdfbe126a2cdd11c912d5
+=======
+        <state relative-caret-position="495">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+>>>>>>> bb14d4ca06d1821f265cd33330d5f6f7ee27b833
         </state>
       </provider>
     </entry>
