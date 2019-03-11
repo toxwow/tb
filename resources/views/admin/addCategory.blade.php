@@ -7,22 +7,20 @@
 
 @section('content')
     <a href="{{route('categoryAdmin')}}">Kategorie</a>
-    <h3 class="as">Edytor {{$service -> name}}</h3>
     <div class="container mt-5">
         <div class="row">
             <div class="col-12">
-            <form action="{{ url('admin/kategorie/'. $service->id) }}" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    {{ csrf_field() }}
-                    {{method_field('PATCH')}}
-                    <input class="form-control mb-3" type="file" name="img">
-                    <label for="nameForm">Nazwa kategorii</label>
-                    <input class="form-control mb-3" id="nameForm" type="text" name="name" value="{{$service->name}}">
-                    <label for="nameForm">Opis</label>
-                    <textarea class="form-control" id="editor" name="description">{{$service->main_description}}</textarea>
-                    <button type="submit" class="btn btn-primary mt-2 float-right" >Zapisz zmiany</button>
-                </div>
-            </form>
+                <form action="{{url('/admin/kategorie/dodaj')}}" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        {{ csrf_field() }}
+                        <input class="form-control mb-3" type="file" name="img">
+                        <label for="nameForm">Nazwa kategorii</label>
+                        <input class="form-control mb-3" id="nameForm" type="text" name="name" value="">
+                        <label for="nameForm">Opis</label>
+                        <textarea class="form-control" id="editor" name="description"></textarea>
+                        <button type="submit" class="btn btn-primary mt-2 float-right" >Zapisz zmiany</button>
+                    </div>
+                </form>
             </div>
         </div>
 

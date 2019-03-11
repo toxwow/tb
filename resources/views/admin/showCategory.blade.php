@@ -19,13 +19,18 @@
             </div>
         </div>
     </div>
-    <a href="{{route('categorySingleAdmin-edit',$service->id) }}" class="btn btn-info my-5" style="width: 100%; color: white">Edytuj {{$service->name}}</a>
+    <a href="{{route('categorySingleAdmin-edit',$service->id) }}" class="btn btn-info mt-3 mb-2" style="width: 100%; color: white">Edytuj {{$service->name}}</a>
+        <form method="POST" action="{{url('/admin/kategorie/'.$service->id)}}">
+            {{ csrf_field() }}
+            {{method_field('DELETE')}}
+            <button type="submit" onclick="return confirm('czy na pewno chcesz usunąć tę kategorię?')" class="btn btn-danger w-100">USUŃ</button>
+        </form>
     <hr style="margin: 50px 0;">
     <div style="">
         <p class="lead">Pod kategorie</p>
         @if(empty($test->first()))
             <div class="alert alert-danger" role="alert">
-                Brak podkategorii. Pamiętaj, że w przypadku braku pod kategorii zostanie wyświetlony opis kategorii.
+                Brak podkategorii. Pamiętaj, że w przypadku braku jakiej kolwiek podkategorii, głowna kategoria będzie wyświetlona na stronie, a jej opis będzie widoczny.
             </div>
         @endif
         <ul>

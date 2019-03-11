@@ -12,6 +12,13 @@ class Service extends Model
 
     }
 
+    public function test()
+    {
+        return $this->hasMany(SubService::class);
+//        return $this->hasManyThrough('App\Service', 'App\SubService');
+
+    }
+
     public $timestamps = false;
 
 }

@@ -16,22 +16,30 @@
 <body>
 <div id="app">
         <div style="width: 100%; background-color: #1b1e21">
-            <div style="color: white; padding: 10px 0;  margin-right: 20px; display: flex; justify-content: flex-end">
-                <p style="font-weight: 600; margin: 0;">Witaj {{Auth::user()->name}}</p>
-                <p style="margin: 0; margin: 0 30px;"> <a href="{{route('home')}}">przejdź do strony</a></p>
-                <p style="margin: 0"><a href="{{route('logoutUser')}}">Wyloguj</a></p>
+            <div class="d-flex" style="justify-content: space-between; align-items: center;">
+                <div>
+                    <p style="margin: 0; margin-left: 40px;"><a href="{{route('admin')}}">Panel głowny</a></p>
+                </div>
+                <div style="color: white; padding: 10px 0;  margin-right: 20px; display: flex; justify-content: flex-end">
+                    <p style="font-weight: 600; margin: 0;">Witaj {{Auth::user()->name}}</p>
+                    <p style="margin: 0; margin: 0 30px;"> <a href="{{route('home')}}">przejdź do strony</a></p>
+                    <p style="margin: 0"><a href="{{route('logoutUser')}}">Wyloguj</a></p>
+                </div>
             </div>
+
         </div>
 
         <div class="container" style="margin-top: 100px">
+
             @yield('content')
 
 
 </div>
 
 
-
+<script src="{{asset('test/jquery/dist/jquery.js')}}"></script>
 @stack('script')
+
 </body>
 </html>
 
