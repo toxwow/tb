@@ -123,6 +123,14 @@
             transition: all 0.3s;
         }
 
+         .move-alert{
+             animation: mymove 1s forwards ;
+         }
+        @keyframes mymove {
+            from {top: -200px;}
+            to {top: -60px;}
+        }
+
     </style>
 
 </head>
@@ -164,8 +172,8 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#"><i class="fas fa-dollar-sign mr-2"></i>Cennik</a>
+                <li class="{{ request()->is('admin/cennik*') ? 'active' : '' }}">
+                    <a href="{{route('priceAdmin')}}"><i class="fas fa-dollar-sign mr-2"></i>Cennik</a>
                 </li>
                 <li>
                     <a href="#"><i class="fas fa-images mr-2"></i>Galeria</a>
@@ -179,7 +187,7 @@
             </ul>
         </nav>
         <div id="content" style="margin-left: 250px;">
-            <div class="container" style="margin-top: 50px">
+            <div class="container" style="margin-top: 50px; position: absolute">
                 @yield('content')
             </div>
         </div>

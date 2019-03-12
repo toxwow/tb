@@ -13,11 +13,15 @@
                 <form action="{{url('/admin/kategorie/dodaj')}}" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         {{ csrf_field() }}
-                        <input class="form-control mb-3" type="file" name="img">
+                        <input class="form-control-file mb-3" required type="file" name="img" accept="image/*">
                         <label for="nameForm">Nazwa kategorii</label>
-                        <input class="form-control mb-3" id="nameForm" type="text" name="name" value="">
+                        <input required class="form-control mb-3" id="nameForm" type="text" name="name" value="">
                         <label for="nameForm">Opis</label>
-                        {{--<textarea class="form-control" id="editor" name="description"></textarea>--}}
+                        @if($errors->has('description'))
+                            <div class="invalid-feedback" style="display: block">
+                                Wprowadź opis
+                            </div>
+                        @endif
                         <textarea class="form-control" name="description" id="summernote"></textarea>
                         <button type="submit" class="btn btn-primary mt-2 float-right" >Zapisz zmiany</button>
                     </div>
@@ -36,7 +40,7 @@
         $('#summernote').summernote({
             placeholder: 'Wprowadź tekst',
             tabsize: 2,
-            height: 400
+            height: 250
         });
     </script>
 

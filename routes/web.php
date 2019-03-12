@@ -23,7 +23,7 @@ Route::get('oferta/{id}', 'SubServiceController@category') -> name('test');
 
 Route::get('oferta/{id}/{id2}', 'SubServiceController@subCategory') -> name('subcategory');
 
-Route::get('cennik', 'MainController@prices') -> name('cennik');
+Route::get('cennik', 'PriceController@prices') -> name('cennik');
 
 Route::get('o-nas', 'MainController@about') -> name('o-nas');
 
@@ -42,7 +42,7 @@ Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout') ->name('logoutUser');
 
 
-//Admin
+//////////Admin///////
 
 //Category
 
@@ -66,6 +66,13 @@ Route::get('/admin/dodaj-podkategorie', 'SubServiceController@addView') -> name(
 
 Route::post( '/admin/podkategorie/dodaj','SubServiceController@store');
 Route::delete('/admin/podkategorie/{id}', 'SubServiceController@destroy');
+
+//Price
+
+Route::get('/admin/cennik', 'PriceController@showAll')->name('priceAdmin');
+Route::match(['put', 'patch'], '/admin/cennik/{id}','PriceController@update');
+Route::post( '/admin/cennik', 'PriceController@store');
+Route::delete('/admin/cennik/{id}', 'PriceController@destroy');
 
 
 

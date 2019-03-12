@@ -77,8 +77,8 @@
 
 @endpush
 
-<div class="jumbotron jumbotron-fluid" style="background: none; background-image: url({{'img/bg.png'}}); background-repeat: no-repeat; background-position: center;  ">
-    <div class="container" style="height: 440px">
+<div class="jumbotron jumbotron-fluid" style="background: none; background-image: url({{'img/bg-new.jpg'}}); background-repeat: no-repeat; background-position: center top; background-size: cover;  ">
+    <div class="container" style="">
         <div class="wrapper-slider" style="">
             <h1 class="display-5" style="font-family: 'Times New Roman'; font-weight: 600; color: #535353">Spełniamu marzenia, nie przekraczamu granic</h1>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque esse fuga impedit quibusdam suscipit!</p>

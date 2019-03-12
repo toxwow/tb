@@ -70,6 +70,11 @@ class ServiceController extends Controller
     {
         if (Auth::check()) {
 
+
+            $this->validate($request,[
+                'description' => 'required|min:5'
+            ]);
+
             $upload_path = 'public/img/category';
             $name = $request->file('img')->hashName();
             $path = $request->file('img')->move(public_path('img/category/'), $name);
@@ -97,7 +102,7 @@ class ServiceController extends Controller
                 $detail = $dom->savehtml();
                 $service->main_description = $detail;
                 $service-> save();
-            return redirect('/admin/kategorie/');
+            return redirect('/admin/kategorie/')->with('sucess', 'Kategoria dodana prawidłowo');;
         }
 
         else{
@@ -193,7 +198,7 @@ class ServiceController extends Controller
             $service->save();
 
 
-            return redirect('/admin/kategorie/'. $id);
+            return redirect('/admin/kategorie')->with('sucess', 'Podkategoria zedtydowana prawidłowo');;
         }
 
         else{
@@ -210,6 +215,6 @@ class ServiceController extends Controller
     public function destroy($id)
     {
         Service::where(['id' => $id])->delete();
-        return redirect('/admin/kategorie/');
+        return redirect('/admin/kategorie/')->with('sucess', 'Podkategoria usunięta prawidłowo');;
     }
 }

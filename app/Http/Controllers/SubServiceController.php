@@ -89,6 +89,11 @@ class SubServiceController extends Controller
     public function store(Request $request)
     {
         if (Auth::check()) {
+
+            $this->validate($request,[
+                'description' => 'required|min:5'
+            ]);
+
             $alias_new = SubService::ConvertToPolish($request->name);
             $sub_service = new SubService();
             $sub_service->service_id = $request->category;
@@ -115,7 +120,8 @@ class SubServiceController extends Controller
             $detail = $dom->savehtml();
             $sub_service->description = $detail;
             $sub_service-> save();
-            return redirect('/admin/podkategorie/');
+
+            return redirect('/admin/podkategorie/')->with('sucess', 'Podkategoria dodana prawidłowo');
         }
 
         else{
@@ -192,7 +198,7 @@ class SubServiceController extends Controller
             $detail = $dom->savehtml();
             $service->description = $detail;
             $service->save();
-            return redirect('/admin/podkategorie/');
+            return redirect('/admin/podkategorie/')->with('sucess', 'Podkategoria zedtydowana prawidłowo');
         }
 
         else{
@@ -209,6 +215,6 @@ class SubServiceController extends Controller
     public function destroy($id)
     {
         SubService::where(['id' => $id])->delete();
-        return redirect('/admin/podkategorie/');
+        return redirect('/admin/podkategorie/')->with('sucess', 'Podkategoria usunięta prawidłowo');
     }
 }

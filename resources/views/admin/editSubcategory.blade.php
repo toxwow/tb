@@ -39,7 +39,7 @@
     <script>
         $('#summernote').summernote({
             tabsize: 2,
-            height: 400
+            height: 250
         });
     </script>
 @endpush
