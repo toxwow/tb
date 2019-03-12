@@ -99,7 +99,24 @@ class SubServiceController extends Controller
             $sub_service->sub_service_alias = $alias_new;
             $sub_service->price = 0;
             $sub_service->time = 0;
-            $sub_service->description = $request->description;
+            $detail=$request->description;
+            $dom = new \domdocument();
+            $dom->loadHtml('<?xml encoding="UTF-8">'.$detail);
+            $images = $dom->getelementsbytagname('img');
+            foreach($images as $k => $img) {
+                $data = $img->getattribute('src');
+                list($type, $data) = explode(';', $data);
+                list(, $data) = explode(',', $data);
+                $data = base64_decode($data);
+                $image_name = time() . $k . '.png';
+                $path = public_path() . '/img/description/' . $image_name;
+                file_put_contents($path, $data);
+                $img->removeattribute('src');
+                $img->setattribute('src', asset('/img/description/'. $image_name));
+                $img->setattribute('old', true);
+            }
+            $detail = $dom->savehtml();
+            $sub_service->description = $detail;
             $sub_service-> save();
             return redirect('/admin/podkategorie/');
         }
@@ -152,7 +169,30 @@ class SubServiceController extends Controller
             $service = SubService::find($id);
             $service->sub_service_name = $request->name;
             $service->service_id = $request->category;
-            $service->description = $request->description;
+//            $service->description = $request->description;
+            $detail=$request->description;
+            $dom = new \domdocument();
+            $dom->loadHtml('<?xml encoding="UTF-8">'.$detail);
+            $images = $dom->getelementsbytagname('img');
+            foreach($images as $k => $img) {
+                $data = $img->getattribute('src');
+                $data1 = $img->getattribute('old');
+                if($data1 == true){
+                    continue;
+                }
+                list($type, $data) = explode(';', $data);
+
+                list(, $data) = explode(',', $data);
+                $data = base64_decode($data);
+                $image_name = time() . $k . '.png';
+                $path = public_path() . '/img/description/' . $image_name;
+                file_put_contents($path, $data);
+                $img->removeattribute('src');
+                $img->setattribute('src', asset('/img/description/'. $image_name));
+                $img->setattribute('old', true);
+            }
+            $detail = $dom->savehtml();
+            $service->description = $detail;
             $service->save();
             return redirect('/admin/podkategorie/');
         }

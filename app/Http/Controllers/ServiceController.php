@@ -79,8 +79,25 @@ class ServiceController extends Controller
             $service->name = $request->name;
             $service->alias = $alias_new;
             $service->image = $name;
-            $service->main_description = $request->description;
-            $service-> save();
+            $detail=$request->description;
+            $dom = new \domdocument();
+            $dom->loadHtml('<?xml encoding="UTF-8">'.$detail);
+            $images = $dom->getelementsbytagname('img');
+            foreach($images as $k => $img) {
+                $data = $img->getattribute('src');
+                list($type, $data) = explode(';', $data);
+                list(, $data) = explode(',', $data);
+                $data = base64_decode($data);
+                $image_name = time() . $k . '.png';
+                $path = public_path() . '/img/description/' . $image_name;
+                file_put_contents($path, $data);
+                $img->removeattribute('src');
+                $img->setattribute('src', asset('/img/description/'. $image_name));
+                $img->setattribute('old', true);
+            }
+                $detail = $dom->savehtml();
+                $service->main_description = $detail;
+                $service-> save();
             return redirect('/admin/kategorie/');
         }
 
@@ -141,7 +158,28 @@ class ServiceController extends Controller
 
             $service = Service::find($id);
             $service->name = $request->name;
-            $service->main_description = $request->description;
+            $detail=$request->description;
+            $dom = new \domdocument();
+            $dom->loadHtml('<?xml encoding="UTF-8">'.$detail);
+            $images = $dom->getelementsbytagname('img');
+            foreach($images as $k => $img) {
+                $data = $img->getattribute('src');
+                $data1 = $img->getattribute('old');
+                if($data1 == true){
+                    continue;
+                }
+                list($type, $data) = explode(';', $data);
+                list(, $data) = explode(',', $data);
+                $data = base64_decode($data);
+                $image_name = time() . $k . '.png';
+                $path = public_path() . '/img/description/' . $image_name;
+                file_put_contents($path, $data);
+                $img->removeattribute('src');
+                $img->setattribute('src', asset('/img/description/'. $image_name));
+                $img->setattribute('old', true);
+            }
+            $detail = $dom->savehtml();
+            $service->main_description = $detail;
 
 
             if ($request->file('img')){

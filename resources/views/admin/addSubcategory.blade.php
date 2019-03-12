@@ -23,7 +23,7 @@
                             @endforeach
                         </select>
                         <label for="nameForm">Opis</label>
-                        <textarea class="form-control" id="editor" name="description"></textarea>
+                        <textarea class="form-control" name="description" id="summernote"></textarea>
                         <button type="submit" class="btn btn-primary mt-2 float-right" >Zapisz zmiany</button>
                     </div>
                 </form>
@@ -35,26 +35,11 @@
 @endsection
 
 @push('script')
-
     <script>
-        function MyUploadAdapterPlugin( editor ) {
-            editor.plugins.get( 'FileRepository' ).createUploadAdapter = function( loader ) {
-                // ...
-            };
-        }
-        // CKEDITOR.replace( 'editor1' );
-        ClassicEditor
-            .create( document.querySelector( '#editor' ),{
-                extraPlugins: [ MyUploadAdapterPlugin ],
-            } )
-            .then( newEditor => {
-                editor = newEditor;
-            } )
-            .catch( error => {
-                console.error( error );
-            } );
-
-
-
+        $('#summernote').summernote({
+            placeholder: 'Wprowadź tekst',
+            tabsize: 2,
+            height: 400
+        });
     </script>
 @endpush

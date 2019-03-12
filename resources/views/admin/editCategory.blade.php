@@ -1,8 +1,7 @@
 @extends('layouts.welcome')
 
 @push('css')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <script src="https://cdn.ckeditor.com/ckeditor5/12.0.0/classic/ckeditor.js"></script>
+
 @endpush
 
 @section('content')
@@ -19,7 +18,7 @@
                     <label for="nameForm">Nazwa kategorii</label>
                     <input class="form-control mb-3" id="nameForm" type="text" name="name" value="{{$service->name}}">
                     <label for="nameForm">Opis</label>
-                    <textarea class="form-control" id="editor" name="description">{{$service->main_description}}</textarea>
+                    <textarea class="form-control" name="description" id="summernote">{{$service->main_description}}</textarea>
                     <button type="submit" class="btn btn-primary mt-2 float-right" >Zapisz zmiany</button>
                 </div>
             </form>
@@ -31,26 +30,10 @@
 @endsection
 
 @push('script')
-
     <script>
-        function MyUploadAdapterPlugin( editor ) {
-            editor.plugins.get( 'FileRepository' ).createUploadAdapter = function( loader ) {
-                // ...
-            };
-        }
-        // CKEDITOR.replace( 'editor1' );
-        ClassicEditor
-            .create( document.querySelector( '#editor' ),{
-                extraPlugins: [ MyUploadAdapterPlugin ],
-            } )
-            .then( newEditor => {
-                editor = newEditor;
-            } )
-            .catch( error => {
-                console.error( error );
-            } );
-
-
-
+        $('#summernote').summernote({
+            tabsize: 2,
+            height: 400
+        });
     </script>
 @endpush
