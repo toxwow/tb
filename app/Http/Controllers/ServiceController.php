@@ -73,8 +73,7 @@ class ServiceController extends Controller
             $upload_path = 'public/img/category';
             $name = $request->file('img')->hashName();
             $path = $request->file('img')->move(public_path('img/category/'), $name);
-            $alias_new = str_replace(' ', '-', $request->name);
-            $alias_new = strtolower($alias_new);
+            $alias_new = Service::ConvertToPolish($request->name);
             $service = new Service();
             $service->name = $request->name;
             $service->alias = $alias_new;
@@ -159,6 +158,7 @@ class ServiceController extends Controller
             $service = Service::find($id);
             $service->name = $request->name;
             $detail=$request->description;
+            $alias_new = Service::ConvertToPolish($request->name);
             $dom = new \domdocument();
             $dom->loadHtml('<?xml encoding="UTF-8">'.$detail);
             $images = $dom->getelementsbytagname('img');
@@ -180,6 +180,7 @@ class ServiceController extends Controller
             }
             $detail = $dom->savehtml();
             $service->main_description = $detail;
+            $service->alias = $alias_new;
 
 
             if ($request->file('img')){

@@ -26,20 +26,20 @@
             <button type="submit" onclick="return confirm('czy na pewno chcesz usunąć tę kategorię?')" class="btn btn-danger w-100">USUŃ</button>
         </form>
     <hr style="margin: 50px 0;">
-    <div style="">
-        <p class="lead">Pod kategorie</p>
-        @if(empty($test->first()))
-            <div class="alert alert-danger" role="alert">
-                Brak podkategorii. Pamiętaj, że w przypadku braku jakiej kolwiek podkategorii, głowna kategoria będzie wyświetlona na stronie, a jej opis będzie widoczny.
-            </div>
-        @endif
-        <ul>
-            @foreach($test as $item)
-                <li>{{$item->sub_service_name}}</li>
-            @endforeach
+    {{--<div style="">--}}
+        {{--<p class="lead">Pod kategorie</p>--}}
+        {{--@if(empty($test->first()))--}}
+            {{--<div class="alert alert-danger" role="alert">--}}
+                {{--Brak podkategorii. Pamiętaj, że w przypadku braku jakiej kolwiek podkategorii, głowna kategoria będzie wyświetlona na stronie, a jej opis będzie widoczny.--}}
+            {{--</div>--}}
+        {{--@endif--}}
+        {{--<ul>--}}
+            {{--@foreach($test as $item)--}}
+                {{--<li>{{$item->sub_service_name}}</li>--}}
+            {{--@endforeach--}}
 
-        </ul>
-        <button type="button" class="btn btn-success">Dodaj podkategorie</button>
-    </div>
+        {{--</ul>--}}
+        {{--<button type="button" class="btn btn-success">Dodaj podkategorie</button>--}}
+    {{--</div>--}}
 
 @endsection

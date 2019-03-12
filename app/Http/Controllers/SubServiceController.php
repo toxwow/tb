@@ -89,10 +89,7 @@ class SubServiceController extends Controller
     public function store(Request $request)
     {
         if (Auth::check()) {
-
-
-            $alias_new = str_replace(' ', '-', $request->name);
-            $alias_new = strtolower($alias_new);
+            $alias_new = SubService::ConvertToPolish($request->name);
             $sub_service = new SubService();
             $sub_service->service_id = $request->category;
             $sub_service->sub_service_name = $request->name;
@@ -167,9 +164,10 @@ class SubServiceController extends Controller
     {
         if (Auth::check()) {
             $service = SubService::find($id);
+            $alias_new = SubService::ConvertToPolish($request->name);
             $service->sub_service_name = $request->name;
             $service->service_id = $request->category;
-//            $service->description = $request->description;
+            $service->sub_service_alias = $alias_new;
             $detail=$request->description;
             $dom = new \domdocument();
             $dom->loadHtml('<?xml encoding="UTF-8">'.$detail);

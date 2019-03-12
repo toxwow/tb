@@ -7,9 +7,6 @@
             <a href="{{route('admin')}}">Panel główny</a>
             <h3>Podkategorie</h3>
         </div>
-        <div>
-            <a href="{{route('addNewSubcategory')}}" class="btn btn-primary">Dodaj nową podkategorie</a>
-        </div>
     </div>
     <hr>
     <div class="container mt-5">
@@ -43,18 +40,22 @@
                                 <tr>
                                     <td style="width: 50%">BRAK PODKATEGORII</td>
                                     <td></td>
-                                    <td></td>
+                                    <td style="text-align: right; padding-right: 50px;">
+                                        <a class="btn btn-success" style="color: white; font-size: 10px; padding:0.375rem 0.75rem;" href="{{route('addNewSubcategory')}}"><i class="fas fa-plus"></i></a>
+                                    </td>
                                 </tr>
                             @else
                                 @foreach($item->test as $single)
                                     <tr>
                                         <td style="width: 50%;">{{$single->sub_service_name}}</td>
-                                        <td style="width: 25%; text-align: right;"><a href="{{route('subCategoryAdmin-edit', $single->id)}}">edytuj</a></td>
+                                        <td style="width: 25%; text-align: right;">
+                                            <a class="btn btn-primary" style="color: white; font-size: 10px; padding:0.375rem 0.75rem;" href="{{route('subCategoryAdmin-edit', $single->id)}}"><i class="fas fa-edit"></i></a>
+                                        </td>
                                         <td style="width: 25%; text-align: right; padding-right: 50px">
                                             <form method="POST" action="{{url('/admin/podkategorie/'.$single->id)}}">
                                                 {{ csrf_field() }}
                                                 {{method_field('DELETE')}}
-                                                <button type="submit" onclick="return confirm('czy na pewno chcesz usunąć tę podkategorię?')" class="btn btn-danger" style="font-size: 10px;">USUŃ</button>
+                                                <button type="submit" onclick="return confirm('czy na pewno chcesz usunąć tę podkategorię?')" class="btn btn-danger" style="font-size: 10px;"><i class="fas fa-trash-alt"></i></button>
                                             </form>
                                         </td>
                                     </tr>

@@ -6,6 +6,7 @@
 
 @section('content')
     <a href="{{route('categoryAdmin')}}">Kategorie</a>
+    <h3>Dodaj nową kategorię</h3>
     <div class="container mt-5">
         <div class="row">
             <div class="col-12">
