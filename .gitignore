@@ -12,3 +12,4 @@ yarn-error.log
 /.idea
 composer.lock
 /public/img/description/*
+/app/analytics/service-account-credentials.json
