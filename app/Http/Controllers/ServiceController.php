@@ -164,8 +164,9 @@ class ServiceController extends Controller
             $service->name = $request->name;
             $detail=$request->description;
             $alias_new = Service::ConvertToPolish($request->name);
+
             $dom = new \domdocument();
-            $dom->loadHtml('<?xml encoding="UTF-8">'.$detail);
+            $dom->loadHtml(mb_convert_encoding($detail, 'HTML-ENTITIES', 'UTF-8'));
             $images = $dom->getelementsbytagname('img');
             foreach($images as $k => $img) {
                 $data = $img->getattribute('src');
