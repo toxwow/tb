@@ -40,6 +40,7 @@
 @endpush
 
 @section('content')
+
 <div class="row">
     <div class="col-8">
         <div class="box-shadow wrapper-content">
@@ -76,6 +77,11 @@
                     <p style="width: 80%; padding: 10px; background-color: #f9f9f9">{{$mostPage[1]['url']}}</p>
                     <p style="width: 20%; padding: 10px; text-align: center; background-color: #f3f3f3">{{$mostPage[1]['pageViews']}}</p>
                 </div>
+
+                <div class="content d-flex" style="">
+                    <p style="width: 80%; padding: 10px; background-color: #f9f9f9">{{$mostPage[3]['url']}}</p>
+                    <p style="width: 20%; padding: 10px; text-align: center; background-color: #f3f3f3">{{$mostPage[3]['pageViews']}}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -96,20 +102,19 @@
             responsive: true,
             data: {
                 labels: [
-                    @foreach($users7day as $item)
+                    @foreach($test as $item)
                             @php
                                 $newDate = date("m.d.y", strtotime($item['date']));
                             @endphp
-                    "{{$newDate}}",
                     "{{$newDate}}",
                     @endforeach
                 ],
                 datasets: [{
                     data: [
-                        @foreach($users7day as $item)
+                        @foreach($test as $item)
                             {{$item['pageViews']}},
-                            {{$item['pageViews']+2}},
                         @endforeach
+
                     ],
                     backgroundColor: [
                         'rgba(90, 175, 156, 0.1)',
@@ -121,11 +126,12 @@
                 }]
             },
             options: {
+
                 scales: {
                     yAxes: [{
                         ticks: {
                             beginAtZero:true,
-                            stepSize: 1,
+                            stepSize: 5,
                         }
                     }]
                 },
@@ -137,7 +143,7 @@
                         left: 10,
                         right: 50,
                         top: 0,
-                        bottom: 0
+                        bottom: 10
                     }
                 }
             }

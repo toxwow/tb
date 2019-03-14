@@ -28,13 +28,14 @@ class HomeController extends Controller
         $analyticsActive = Analytics::getAnalyticsService()->data_realtime->get('ga:'.env('ANALYTICS_VIEW_ID'), 'rt:activeVisitors')->totalsForAllResults['rt:activeVisitors'];
         $analytics7day = Analytics::fetchVisitorsAndPageViews(Period::days(7));
         $test = Analytics::fetchMostVisitedPages(Period::days(7), 20);
+        $test1 = Analytics::fetchTotalVisitorsAndPageViews(Period::days(7));
 
 
 
         return view('admin.home', [
             'usersActive' => $analyticsActive,
-            'users7day' => $analytics7day,
             'mostPage' => $test,
+            'test' => $test1,
         ]);
     }
 }
