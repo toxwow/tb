@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', '')
+@section('title', ' - Home')
 
 @push('css')
     <style>

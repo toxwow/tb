@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Analytics;
+use Spatie\Analytics\Period;
 
 class HomeController extends Controller
 {
@@ -23,7 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $analyticsActive = Analytics::getAnalyticsService()->data_realtime->get('ga:'.env('ANALYTICS_VIEW_ID'), 'rt:activeVisitors')->totalsForAllResults['rt:activeVisitors'];
+        $analytics7day = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+        $test = Analytics::fetchMostVisitedPages(Period::days(7), 20);
 
-        return view('admin.home');
+
+
+        return view('admin.home', [
+            'usersActive' => $analyticsActive,
+            'users7day' => $analytics7day,
+            'mostPage' => $test,
+        ]);
     }
 }

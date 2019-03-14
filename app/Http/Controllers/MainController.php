@@ -7,6 +7,8 @@ use App\Service;
 use App\SubService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Analytics;
+use Spatie\Analytics\Period;
 
 class MainController extends Controller
 {
