@@ -38,6 +38,7 @@ class GalleryController extends Controller
             $photo->alias = $alias;
             $photo->alt = $alt;
             if($photo->save()){
+
                 return response()->json(["response" =>true,"photo"=>$photo]);
             }
             return response()->json(["response" =>false,"photo"=>$photo]);

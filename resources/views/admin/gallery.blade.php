@@ -161,7 +161,8 @@
                 var nameImg = $( "input#imageName" ).val();
                 var descImg = $( "textarea#imageAlt" ).val();
                 $.ajax({
-                    url: "{{route('upload.image')}}",
+                    {{--url: "{{route('upload.image')}}",--}}
+                    url: '{{URL::to('/admin/galeria/')}}',
                     type: "post",
                     data: {
                         "image":img,
@@ -170,6 +171,7 @@
                         "name": nameImg,
                         "alt": descImg,
                     },
+
                     success: function (data) {
                     }
                 });
