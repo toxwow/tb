@@ -96,7 +96,7 @@
                     }
                 });
                 $.ajax({
-                    url: "/admin/galeria/" + id,
+                    url: "{{route('delete.image')}}/" + id,
                     method: 'delete',
                     data: {
                         name: jQuery('#name').val(),
