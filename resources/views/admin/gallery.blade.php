@@ -69,7 +69,7 @@
                             </select>
                             <label for="imageAlt">Podaj opis</label>
                             <textarea required class="form-control mb-3" name="imageAlt" type="textarea" id="imageAlt"></textarea>
-                            <button type="submit" class="btn btn-primary btn-block upload-image" style="margin-top:2%">Upload Image</button>
+                            <button type="submit" class="btn btn-primary btn-block upload-image" style="margin-top:2%">Dodaj zdjęcie</button>
                         </form>
                     </div>
                     <div class="col-md-8 text-center">
@@ -87,27 +87,33 @@
     <script>
 
             $('.btn-delete-ajax').click(function(e){
-                var id = $(this ).attr('data-id');
-                console.log(id);
-                e.preventDefault();
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                });
-                $.ajax({
-                    url: "{{route('delete.image')}}/" + id,
-                    method: 'delete',
-                    data: {
-                        name: jQuery('#name').val(),
-                        type: jQuery('#type').val(),
-                        price: jQuery('#price').val()
-                    },
-                    success: function(result){
-                        window.location.reload();
-                        history.go(0);
-                        window.location.href=window.location.href;
-                    }});
+                var r = confirm("Czy na pewno chcesz usunąć zdjęcie?");
+                if (r == true) {
+                    var id = $(this).attr('data-id');
+                    e.preventDefault();
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+                    $.ajax({
+                        url: "{{route('delete.image')}}/" + id,
+                        method: 'delete',
+                        data: {
+                            name: jQuery('#name').val(),
+                            type: jQuery('#type').val(),
+                            price: jQuery('#price').val()
+                        },
+                        success: function (result) {
+                            window.location.reload();
+                            history.go(0);
+                            window.location.href = window.location.href;
+                        }
+                    });
+                }
+                else{
+
+                }
             });
 
     </script>
@@ -173,6 +179,9 @@
                     },
 
                     success: function (data) {
+                        window.location.reload();
+                        history.go(0);
+                        window.location.href=window.location.href;
                     }
                 });
             });

@@ -178,9 +178,6 @@
                 <li class="{{ request()->is('admin/galeria*') ? 'active' : '' }}">
                     <a href="{{route('galleryAdmin')}}"><i class="fas fa-images mr-2"></i>Galeria</a>
                 </li>
-                <li>
-                    <a href="#"><i class="fas fa-user mr-2"></i>Dodaj użytkownika</a>
-                </li>
                 <li class="logout">
                     <a href="{{route('logoutUser')}}"><i class="fas fa-sign-out-alt mr-2"></i>Wyloguj</a>
                 </li>

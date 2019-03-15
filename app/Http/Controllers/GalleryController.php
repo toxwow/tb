@@ -10,10 +10,16 @@ use Illuminate\Support\Facades\Auth;
 class GalleryController extends Controller
 {
     public function showAll()
+    {
+        if (Auth::check()) {
+            $category = Service::all();
+            $photos = Photo::all();
+            return view('admin.gallery', ['photos' => $photos, 'category' => $category]);
+        }
 
-    {   $category = Service::all();
-        $photos = Photo::all();
-        return view ('admin.gallery', ['photos' => $photos, 'category' => $category]);
+        else{
+            return redirect ('/');
+        }
     }
 
     public function uploadImage(Request $request)
@@ -38,7 +44,6 @@ class GalleryController extends Controller
             $photo->alias = $alias;
             $photo->alt = $alt;
             if($photo->save()){
-
                 return response()->json(["response" =>true,"photo"=>$photo]);
             }
             return response()->json(["response" =>false,"photo"=>$photo]);
