@@ -31,8 +31,6 @@ class PriceController extends Controller
     public function store(Request $request)
     {
         if (Auth::check()) {
-
-
             $item = new Prices();
             $item->service_id = $request->service_id;
             $item->name = $request->name;
@@ -50,11 +48,16 @@ class PriceController extends Controller
 
     public function update(Request $request, $id)
     {
-        $item = Prices::find($id);
-        $item->name = $request->name;
-        $item->price = $request->price;
-        $item->save();
-        return redirect('/admin/cennik')->with('sucess', 'Usługa w cenniku zedtydowana prawidłowo');;
+        if (Auth::check()) {
+            $item = Prices::find($id);
+            $item->name = $request->name;
+            $item->price = $request->price;
+            $item->save();
+            return redirect('/admin/cennik')->with('sucess', 'Usługa w cenniku zedtydowana prawidłowo');
+        }
+        else{
+            return redirect ('/');
+        }
     }
 
     public function destroy($id)

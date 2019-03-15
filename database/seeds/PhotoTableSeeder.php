@@ -49,35 +49,35 @@ class PhotoTableSeeder extends Seeder
         DB::table('photos')->insert([
             'name' => 'Medycyna estetyczna',
             'path' => '6.jpg',
-            'alias' => 'medycyna-estetycz a',
+            'alias' => 'medycyna-estetycza',
             'alt' => 'alt-description',
         ]);
 
         DB::table('photos')->insert([
             'name' => 'Medycyna estetyczna',
             'path' => '7.jpg',
-            'alias' => 'medycyna-estetycz a',
+            'alias' => 'medycyna-estetycza',
             'alt' => 'alt-description',
         ]);
 
         DB::table('photos')->insert([
             'name' => 'Medycyna estetyczna',
             'path' => '8.jpg',
-            'alias' => 'medycyna-estetycz a',
+            'alias' => 'medycyna-estetycza',
             'alt' => 'alt-description',
         ]);
 
         DB::table('photos')->insert([
             'name' => 'Medycyna estetyczna',
             'path' => '9.jpg',
-            'alias' => 'medycyna-estetycz a',
+            'alias' => 'medycyna-estetycza',
             'alt' => 'alt-description',
         ]);
 
         DB::table('photos')->insert([
             'name' => 'Medycyna estetyczna',
             'path' => '10.jpg',
-            'alias' => 'medycyna-estetycz a',
+            'alias' => 'medycyna-estetycza',
             'alt' => 'alt-description',
         ]);
 

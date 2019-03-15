@@ -74,6 +74,13 @@ Route::match(['put', 'patch'], '/admin/cennik/{id}','PriceController@update');
 Route::post( '/admin/cennik', 'PriceController@store');
 Route::delete('/admin/cennik/{id}', 'PriceController@destroy');
 
+//Gallery
+
+Route::get('/admin/galeria', 'GalleryController@showAll')->name('galleryAdmin');
+Route::post('/admin/galeria', ['as'=>'upload.image','uses'=>'GalleryController@uploadImage']);
+Route::delete('/admin/galeria/{id}', 'GalleryController@destroy');
+
+
 
 
 

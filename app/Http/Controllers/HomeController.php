@@ -25,17 +25,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $analyticsActive = Analytics::getAnalyticsService()->data_realtime->get('ga:'.env('ANALYTICS_VIEW_ID'), 'rt:activeVisitors')->totalsForAllResults['rt:activeVisitors'];
-        $analytics7day = Analytics::fetchVisitorsAndPageViews(Period::days(7));
-        $test = Analytics::fetchMostVisitedPages(Period::days(7), 20);
-        $test1 = Analytics::fetchTotalVisitorsAndPageViews(Period::days(7));
+        if (Auth::check()) {
+            $analyticsActive = Analytics::getAnalyticsService()->data_realtime->get('ga:' . env('ANALYTICS_VIEW_ID'), 'rt:activeVisitors')->totalsForAllResults['rt:activeVisitors'];
+            $analytics7day = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+            $test = Analytics::fetchMostVisitedPages(Period::days(7), 20);
+            $test1 = Analytics::fetchTotalVisitorsAndPageViews(Period::days(7));
+            return view('admin.home', [
+                'usersActive' => $analyticsActive,
+                'mostPage' => $test,
+                'test' => $test1,
+            ]);
+        }
 
-
-
-        return view('admin.home', [
-            'usersActive' => $analyticsActive,
-            'mostPage' => $test,
-            'test' => $test1,
-        ]);
+        else{
+            return redirect ('/');
+        }
     }
 }

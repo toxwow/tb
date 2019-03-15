@@ -175,8 +175,8 @@
                 <li class="{{ request()->is('admin/cennik*') ? 'active' : '' }}">
                     <a href="{{route('priceAdmin')}}"><i class="fas fa-dollar-sign mr-2"></i>Cennik</a>
                 </li>
-                <li>
-                    <a href="#"><i class="fas fa-images mr-2"></i>Galeria</a>
+                <li class="{{ request()->is('admin/galeria*') ? 'active' : '' }}">
+                    <a href="{{route('galleryAdmin')}}"><i class="fas fa-images mr-2"></i>Galeria</a>
                 </li>
                 <li>
                     <a href="#"><i class="fas fa-user mr-2"></i>Dodaj użytkownika</a>
@@ -187,7 +187,7 @@
             </ul>
         </nav>
         <div id="content" style="margin-left: 250px;">
-            <div class="container" style="margin-top: 50px; position: absolute">
+            <div class="container" style="margin-top: 50px;">
                 @yield('content')
             </div>
         </div>
