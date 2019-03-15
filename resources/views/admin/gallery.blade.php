@@ -162,7 +162,7 @@
                 var descImg = $( "textarea#imageAlt" ).val();
                 $.ajax({
                     url: "{{route('upload.image')}}",
-                    type: "POST",
+                    type: "post",
                     data: {
                         "image":img,
                         "category": categorySelect,
@@ -171,9 +171,6 @@
                         "alt": descImg,
                     },
                     success: function (data) {
-                        window.location.reload();
-                        history.go(0);
-                        window.location.href=window.location.href;
                     }
                 });
             });
