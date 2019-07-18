@@ -78,10 +78,10 @@
                     <p style="width: 20%; padding: 10px; text-align: center; background-color: #f3f3f3">{{$mostPage[1]['pageViews']}}</p>
                 </div>
 
-                <div class="content d-flex" style="">
-                    <p style="width: 80%; padding: 10px; background-color: #f9f9f9">{{$mostPage[3]['url']}}</p>
-                    <p style="width: 20%; padding: 10px; text-align: center; background-color: #f3f3f3">{{$mostPage[3]['pageViews']}}</p>
-                </div>
+                {{--<div class="content d-flex" style="">--}}
+                    {{--<p style="width: 80%; padding: 10px; background-color: #f9f9f9">{{$mostPage[3]['url']}}</p>--}}
+                    {{--<p style="width: 20%; padding: 10px; text-align: center; background-color: #f3f3f3">{{$mostPage[3]['pageViews']}}</p>--}}
+                {{--</div>--}}
             </div>
         </div>
     </div>
