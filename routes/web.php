@@ -78,7 +78,7 @@ Route::delete('/admin/cennik/{id}', 'PriceController@destroy');
 
 Route::get('/admin/galeria', 'GalleryController@showAll')->name('galleryAdmin');
 Route::post('/admin/galeria', ['as'=>'upload.image','uses'=>'GalleryController@uploadImage']);
-Route::delete('/admin/galeria/{id?}', ['as'=>'delete.image','uses'=>'GalleryController@destroy']);
+Route::post('/admin/galeria/delete/{id?}', ['as'=>'delete.image','uses'=>'GalleryController@destroy']);
 
 
 
