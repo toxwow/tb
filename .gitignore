@@ -13,3 +13,6 @@ yarn-error.log
 composer.lock
 /public/img/description/*
 /app/analytics/service-account-credentials.json
+/public/img/category
+/public/img/slider
+/public/img/certyfikaty
