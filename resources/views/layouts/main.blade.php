@@ -74,7 +74,7 @@
                     <li class="nav-item"><a href="{{ route('o-nas') }}" class="nav-link {{ request()->is('o-nas') ? 'active' : '' }}">O NAS</a></li>
                     <li class="nav-item"><a href="{{route('oferta')}}" class="nav-link {{ request()->is('oferta*') ? 'active' : '' }}">OFERTA</a></li>
                     <li class="nav-item"><a href="{{ route('cennik') }}" class="nav-link {{ request()->is('cennik') ? 'active' : '' }}">CENNIK</a></li>
-                    <li class="nav-item"><a href="{{'/posts'}}" class="nav-link disabled {{ request()->is('posts*') ? 'active' : '' }}">PODSŁUCHANE KONSULTACJE</a></li>
+                    {{--<li class="nav-item"><a href="{{'/posts'}}" class="nav-link disabled {{ request()->is('posts*') ? 'active' : '' }}">PODSŁUCHANE KONSULTACJE</a></li>--}}
                     <li class="nav-item"><a href="{{ route('galeria') }}" class="nav-link {{ request()->is('galeria') ? 'active' : '' }}">GALERIA</a></li>
                     <li class="nav-item"><a href="{{ route('kontakt') }}" class="nav-link {{ request()->is('kontakt') ? 'active' : '' }}">KONTAKT</a></li></li>
                 </ul>
