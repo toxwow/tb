@@ -210,7 +210,7 @@
             </div>
             <div class="col-sm-12 col-md-4 order-first order-md-last mb-3">
                 <p class="m-0 mb-1">Anna Taborska</p>
-                <p class="m-0 mb-1">Plac Kazimierza Wielkiego 11</p>
+                <p class="m-0 mb-1">Bocheńska 28a</p>
                 <p class="m-0">32-005 Niepołomice</p>
                 <div class="mt-4 mb-1" style="display: inline-flex">
                     <i class="material-icons" style="margin-right: 8px; color: #646464">phone</i>
