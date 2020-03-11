@@ -104,7 +104,6 @@
 <script src="{{asset('test/jquery/dist/jquery.js')}}"></script>
 <script src="{{asset('test/owl.carousel/dist/owl.carousel.min.js')}}"></script>
 
-
 <script>
 
 

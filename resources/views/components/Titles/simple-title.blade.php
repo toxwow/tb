@@ -5,6 +5,7 @@
                 <div class="{{$colorStatus == 'yes' ? 'bg-title' : ''}}" style="width: 100%">
                     <div class="title-wrapper">
                         <h3 class="title">{{$title}}</h3>
+{{--                        <p class="desc">{{$description}}</p>--}}
                         <p class="desc">{{$description}}</p>
                     </div>
                 </div>

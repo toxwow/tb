@@ -9,6 +9,10 @@
             overflow: hidden;
         }
 
+        #more{
+            display: none;
+        }
+
         .img-wrapper-category > div {
             background-position: center;
             background-repeat: no-repeat;
@@ -114,7 +118,8 @@
             oferta
         @endslot
         @slot('description')
-            Wśród najważniejszych i najbardziej aktualnych działań podejmowanych w obszarze kosmetyki, estetyki i dbałości o piękno kobiece w naszym gabinecie wykonywane są specjalistyczne zabiegi z zakresu szeroko pojętej profesjonalnej kosmetologii, makijażu permanentnego, jak i medycyny estetycznej. Praca prowadzona jest z zastosowaniem najwyższej jakości, najnowszych preparatów medycznych, innowacyjnych technologii, środków i urządzeń kosmetycznych. Pełna lista zabiegów wraz z ich szacowanym kosztem znajduje się poniżej.
+            Wśród najważniejszych i najbardziej aktualnych działań podejmowanych w obszarze kosmetyki, estetyki i dbałości o piękno kobiece w naszym gabinecie wykonywane są specjalistyczne zabiegi z zakresu szeroko pojętej profesjonalnej kosmetologii, makijażu permanentnego, jak i medycyny estetycznej.<span id="dots">...</span><span id="more"> Praca prowadzona jest z zastosowaniem najwyższej jakości, najnowszych preparatów medycznych, innowacyjnych technologii, środków i urządzeń kosmetycznych. Pełna lista zabiegów wraz z ich szacowanym kosztem znajduje się poniżej.</span>
+            <span onclick="myFunction()" id="myBtn" style="text-decoration: underline">Czytaj więcej</span>
         @endslot
     @endcomponent
 
@@ -228,6 +233,22 @@
 
 @push('script')
     <script>
+
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Czytaj więcej";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Zwiń";
+                moreText.style.display = "inline";
+            }
+        }
 
         $('.subCategory').hide();
         $( ".wrapper-text-category" ).click(function() {
