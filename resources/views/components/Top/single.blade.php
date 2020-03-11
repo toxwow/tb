@@ -81,7 +81,7 @@
     <div class="container" style="">
         <div class="wrapper-slider" style="">
             <h1 class="display-5" style="font-family: 'Times New Roman'; font-weight: 600; color: #535353">Spełniamu marzenia, nie przekraczamu granic</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque esse fuga impedit quibusdam suscipit!</p>
+            <p class="lead">Naszą misją jest dbałość o doskonałość, urodę i estetykę, wydobywanie najlepszych cech ludzkiego piękna poprzez harmonię, stosowność i umiar wykonywanych zabiegów. </p>
             <div class="button-wrapper">
                 <a class="btn btn-custom primary" href="{{route('oferta')}}">OFERTA</a>
                 <a class="btn btn-custom white" href="{{ route('kontakt') }}">KONTAKT</a>

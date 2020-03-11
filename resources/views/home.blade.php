@@ -114,7 +114,7 @@
             oferta
         @endslot
         @slot('description')
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum iure, iusto quisquam quo saepe vitae.
+            Wśród najważniejszych i najbardziej aktualnych działań podejmowanych w obszarze kosmetyki, estetyki i dbałości o piękno kobiece w naszym gabinecie wykonywane są specjalistyczne zabiegi z zakresu szeroko pojętej profesjonalnej kosmetologii, makijażu permanentnego, jak i medycyny estetycznej. Praca prowadzona jest z zastosowaniem najwyższej jakości, najnowszych preparatów medycznych, innowacyjnych technologii, środków i urządzeń kosmetycznych. Pełna lista zabiegów wraz z ich szacowanym kosztem znajduje się poniżej.
         @endslot
     @endcomponent
 

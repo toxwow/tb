@@ -55,8 +55,12 @@
     <div class="img-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center mb-3">
+                <div class="col-12 text-center mb-3" style="position: relative">
                     <a href="{{route('home')}}"><img src="{{ asset('/img/logo.jpg')}}" style="width: 300px;"  alt=""></a>
+                    <div class="social-wrapper" style="position: absolute; right: 0px; top: 20px; display: flex;">
+                        <a href="https://www.facebook.com/StudioUrodyAnnaTaborska" target="_blank"><img src="{{asset('/img/icons/facebook.png')}}" alt="" style="width: 22px;"></a>
+                        <a href="https://www.instagram.com/annataborska.studio/" target="_blank"><img src="{{asset('/img/icons/instagram.png')}}" alt="" style="width: 22px; margin-left: 15px;"></a>
+                    </div>
                 </div>
             </div>
         </div>
