@@ -63,8 +63,8 @@
                 <div class="modal-body">
                     <form action="" id="form-update" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            {{ csrf_field() }}
-                            {{method_field('PATCH')}}
+                            @method('PATCH')
+                            @csrf
                             <label for="name">Nazwa usługi</label>
                             <input class="form-control mb-3" id="nameForm" type="text" name="name" value="">
                             <label for="price">Cena</label>
