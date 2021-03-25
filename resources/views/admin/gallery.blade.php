@@ -38,6 +38,8 @@
                                 <div class="d-flex h-100" style="align-items: center; justify-content: center;">
                                     <p data-id="{{$item->id}}" class='btn-delete-ajax' style=" color: white; opacity: 1; font-size: 18px; cursor: pointer; padding: 20px;">
                                         <i class="fas fa-trash-alt"></i>
+
+                                        @csrf
                                     </p>
                                 </div>
 
