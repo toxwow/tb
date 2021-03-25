@@ -92,6 +92,7 @@
                 var r = confirm("Czy na pewno chcesz usunąć zdjęcie?");
                 if (r == true) {
                     var id = $(this).attr('data-id');
+                    var token = $("input[name='_token']").attr("value");
                     e.preventDefault();
                     $.ajaxSetup({
                         headers: {
