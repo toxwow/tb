@@ -61,7 +61,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="" id="form-update" method="POST" enctype="multipart/form-data">
+                    <form action="" id="form-update" enctype="multipart/form-data">
                         <div class="form-group">
                             @method('PATCH')
                             @csrf
