@@ -103,7 +103,9 @@
                         data: {
                             name: jQuery('#name').val(),
                             type: jQuery('#type').val(),
-                            price: jQuery('#price').val()
+                            price: jQuery('#price').val(),
+                            '_method': 'POST',
+                            "_token": token,
                         },
                         success: function (result) {
                             window.location.reload();
