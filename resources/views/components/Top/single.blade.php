@@ -80,7 +80,7 @@
 <div class="jumbotron jumbotron-fluid" style="background: none; background-image: url({{'img/bg-new.jpg'}}); background-repeat: no-repeat; background-position: center top; background-size: cover;  ">
     <div class="container" style="">
         <div class="wrapper-slider" style="">
-            <h1 class="display-5" style="font-family: 'Times New Roman'; font-weight: 600; color: #535353">Spełniamy marzenia, nie przekraczamu granic</h1>
+            <h1 class="display-5" style="font-family: 'Times New Roman'; font-weight: 600; color: #535353">Spełniamy marzenia, nie przekraczamy granic</h1>
             <p class="lead">Naszą misją jest dbałość o doskonałość, urodę i estetykę, wydobywanie najlepszych cech ludzkiego piękna poprzez harmonię, stosowność i umiar wykonywanych zabiegów. </p>
             <div class="button-wrapper">
                 <a class="btn btn-custom primary" href="{{route('oferta')}}">OFERTA</a>
