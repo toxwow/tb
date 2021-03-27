@@ -52,8 +52,9 @@ class PriceController extends Controller
             $item = Prices::find($id);
             $item->name = $request->name;
             $item->price = $request->price;
-            die();
+
             $item->save();
+            die();
             return redirect('/admin/cennik')->with('sucess', 'Usługa w cenniku zedtydowana prawidłowo');
         }
         else{
