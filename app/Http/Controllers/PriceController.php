@@ -54,7 +54,7 @@ class PriceController extends Controller
             $item->price = $request->price;
 
             $item->save();
-            die();
+
             return redirect('/admin/cennik')->with('sucess', 'Usługa w cenniku zedtydowana prawidłowo');
         }
         else{
