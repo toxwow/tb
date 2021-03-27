@@ -25,6 +25,8 @@ Route::get('oferta/{id}/{id2}', 'SubServiceController@subCategory') -> name('sub
 
 Route::get('cennik', 'PriceController@prices') -> name('cennik');
 
+Route::get('/admin/cennik/{id}', 'PriceController@update')->name('cennik.edit');
+
 Route::get('o-nas', 'MainController@about') -> name('o-nas');
 
 Route::get('galeria', 'MainController@gallery') -> name('galeria');
